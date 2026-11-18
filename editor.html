@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Editor — Arian Jay G. Maala</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/editor.css?v=3">
+  <script src="js/boot.js"></script>
+  <script type="module" src="js/editor.js?v=4"></script>
+</head>
+<body class="ed-body">
+  <!-- Start: choose the folder. This page only touches the folder you choose, on your own computer. -->
+  <main class="ed-start" data-start>
+    <div class="ed-start__card paper">
+      <h1>Portfolio Editor</h1>
+      <p data-start-text>Choose your portfolio's <strong>public</strong> folder, then allow editing when your browser asks. Your photos and changes are saved straight into that folder.</p>
+      <p class="ed-path">Desktop → My Portfolio → <strong>public</strong></p>
+      <div class="ed-start__actions">
+        <button class="btn btn--primary" type="button" data-continue hidden></button>
+        <button class="btn btn--outline" type="button" data-pick>Choose folder</button>
+      </div>
+      <p class="ed-error" data-start-error role="alert"></p>
+      <p class="ed-unsupported" data-unsupported hidden>This browser can't save files to your computer. Please open this page in <strong>Microsoft Edge</strong> or <strong>Google Chrome</strong> on a computer.</p>
+    </div>
+  </main>
+
+  <div class="ed-app" data-app hidden>
+    <header class="ed-top">
+      <p class="ed-top__title">Portfolio Editor</p>
+      <p class="ed-top__status" data-status role="status" aria-live="polite">All changes saved</p>
+      <a class="btn btn--outline" href="index.html" target="_blank" rel="noopener">View my site</a>
+      <button class="btn btn--yellow" type="button" data-save>Save changes</button>
+    </header>
+    <nav class="ed-nav" aria-label="Portfolio sections" data-nav></nav>
+    <main class="ed-main" tabindex="-1" data-main></main>
+  </div>
+
+  <input type="file" data-file-input hidden>
+  <div class="ed-toast" data-toast role="status" aria-live="polite" hidden></div>
+</body>
+</html>

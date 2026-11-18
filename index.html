@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en" data-page="home">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arian Jay G. Maala — Research Enthusiast &amp; Aspiring Data Analyst</title>
+  <meta name="description" content="Portfolio of Arian Jay G. Maala, a BS Computer Science student at Biliran Province State University — research enthusiast and aspiring data analyst.">
+  <meta name="theme-color" content="#123B4A">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arian Jay G. Maala — Research Enthusiast & Aspiring Data Analyst">
+  <meta property="og:description" content="Computer Science student at Biliran Province State University, passionate about research, data analysis, and technology.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/loading.css">
+  <link rel="stylesheet" href="css/depth.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/mode.css">
+  <link rel="stylesheet" href="css/devices.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/hero-id.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/doc-viewer.css">
+  <!-- intro-config -->
+  <script src="js/boot.js"></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <!-- Falling school-ID intro. Runs before the rest of the page is parsed, so there is no flash;
+       without JavaScript nothing is shown and the portfolio is immediately usable. -->
+  <script src="js/loading.js"></script>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Mobile top bar -->
+  <header class="topbar">
+    <a class="topbar__brand" href="#home">
+      <span class="avatar avatar--sm" data-avatar><span class="avatar__monogram">AJ</span></span>
+      <span class="topbar__name">Arian Jay G. Maala</span>
+    </a>
+    <button class="icon-btn topbar__mode" type="button" data-mode-toggle></button>
+    <button class="icon-btn topbar__toggle" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Open navigation menu">
+      <span data-icon="menu"></span>
+    </button>
+  </header>
+
+  <!-- Sidebar navigation -->
+  <aside class="sidebar" id="sidebar" aria-label="Portfolio navigation">
+    <div class="sidebar__inner">
+      <button class="icon-btn sidebar__close" type="button" aria-label="Close navigation menu"><span data-icon="x"></span></button>
+
+      <div class="sidebar__profile">
+        <span class="avatar avatar--lg" data-avatar><span class="avatar__monogram">AJ</span></span>
+        <p class="sidebar__name" data-field="fullName">Arian Jay G. Maala</p>
+        <p class="sidebar__label" data-roles>
+          <span>Research Enthusiast</span>
+          <span>Aspiring Data Analyst</span>
+        </p>
+      </div>
+
+      <nav class="sidebar__nav" aria-label="Sections">
+        <ul>
+          <li><a href="#home" data-nav-link="home"><span data-icon="home"></span><span>Home</span></a></li>
+          <li><a href="#about" data-nav-link="about"><span data-icon="user"></span><span>About Me</span></a></li>
+          <li><a href="#education" data-nav-link="education"><span data-icon="graduation-cap"></span><span>Education</span></a></li>
+          <li><a href="#skills" data-nav-link="skills"><span data-icon="layers"></span><span>Skills</span></a></li>
+          <li><a href="#projects" data-nav-link="projects"><span data-icon="flask"></span><span>Research &amp; Projects</span></a></li>
+          <li><a href="#experience" data-nav-link="experience"><span data-icon="briefcase"></span><span>Experience</span></a></li>
+          <li><a href="#achievements" data-nav-link="achievements"><span data-icon="trophy"></span><span>Achievements</span></a></li>
+          <li><a href="#leadership" data-nav-link="leadership"><span data-icon="users"></span><span>Leadership</span></a></li>
+          <li><a href="#trainings" data-nav-link="trainings"><span data-icon="award"></span><span>Trainings</span></a></li>
+          <li data-documents-link hidden><a href="#documents" data-nav-link="documents"><span data-icon="file-text"></span><span>Résumé &amp; CV</span></a></li>
+          <li><a href="#contact" data-nav-link="contact"><span data-icon="mail"></span><span>Contact</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__footer">
+        <div class="mode-switch" role="group" aria-label="Light or dark mode">
+          <button class="mode-switch__btn" type="button" data-mode-choice="light" aria-pressed="true"><span data-icon="sun"></span>Light</button>
+          <button class="mode-switch__btn" type="button" data-mode-choice="dark" aria-pressed="false"><span data-icon="moon"></span>Dark</button>
+        </div>
+        <fieldset class="theme-picker" data-theme-picker>
+          <legend class="theme-picker__legend"><span data-icon="palette"></span>Color theme</legend>
+          <div class="theme-picker__options" data-theme-options></div>
+          <p class="theme-picker__name" data-theme-name aria-live="polite"></p>
+        </fieldset>
+        <a class="btn btn--yellow btn--block" href="#contact"><span data-icon="send"></span><span>Let's connect</span></a>
+        <ul class="social-list social-list--sidebar" data-socials aria-label="Social profiles"></ul>
+      </div>
+    </div>
+  </aside>
+  <button class="sidebar-toggle" type="button" data-sidebar-toggle aria-controls="sidebar" aria-expanded="true" aria-label="Hide sidebar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+  <div class="drawer-backdrop" data-drawer-backdrop hidden></div>
+
+  <main id="main" class="main" tabindex="-1">
+
+    <!-- ============================== HERO ============================== -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="hero__hello hand">Hello, I'm</p>
+          <h1 class="hero__name" id="hero-title">
+            <span class="hero__name-line">Arian Jay</span>
+            <span class="hero__name-line hero__name-line--accent">G. Maala</span>
+          </h1>
+          <p class="hero__roles">
+            <span class="hero__role hero__role--marked">Research Enthusiast.</span>
+            <span class="hero__role">Aspiring Data Analyst.</span>
+          </p>
+          <p class="hero__intro" data-field="heroIntro">I am a Computer Science student passionate about research, data analysis, and technology. I enjoy exploring complex problems, working with data, developing meaningful insights, and transforming information into solutions that support informed decision-making.</p>
+          <p class="hero__statement" data-field="heroStatement">Curious by nature. Analytical in thinking. Research-driven in purpose.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#projects"><span>Explore My Portfolio</span><span data-icon="arrow-right"></span></a>
+            <a class="btn btn--outline btn--lg" href="#contact"><span>Contact Me</span></a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <span class="hero__halo"></span>
+          <svg class="hero__dots" viewBox="0 0 320 320">
+            <circle cx="24" cy="40" r="4"/><circle cx="70" cy="22" r="3"/><circle cx="292" cy="58" r="5"/>
+            <circle cx="260" cy="20" r="3"/><circle cx="300" cy="250" r="4"/><circle cx="16" cy="280" r="5"/>
+            <circle cx="52" cy="300" r="3"/><circle cx="210" cy="304" r="3"/>
+          </svg>
+
+          <!-- The same school ID as the welcome screen, levitating. Text and photo come from "intro" in portfolio.json. -->
+          <div class="hero-id">
+            <span class="hero-id__shadow"></span>
+            <span class="hero-id__ring"></span>
+            <span class="hero-id__ring hero-id__ring--2"></span>
+            <div class="hero-id__float">
+              <span class="hero-id__aura"></span>
+              <article class="id-card">
+                <span class="id-card__slot"></span>
+                <header class="id-card__head">
+                  <p class="id-card__uni" data-id-field="university">Biliran Province State University</p>
+                  <p class="id-card__kind">Student Identification</p>
+                </header>
+                <div class="id-card__body">
+                  <div class="id-card__photo" data-id-photo><span class="id-card__monogram">AM</span></div>
+                  <p class="id-card__name" data-id-field="displayName">Arian Jay G. Maala</p>
+                  <p class="id-card__program" data-id-field="program">BS Computer Science</p>
+                  <p class="id-card__period" data-id-field="academicPeriod">2023–2027</p>
+                </div>
+                <footer class="id-card__foot">
+                  <span class="id-card__chip"></span>
+                  <span class="id-card__bars"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                  <span class="id-card__note">Portfolio card · not an official ID</span>
+                </footer>
+              </article>
+              <span class="hero-id__spark hero-id__spark--1"></span>
+              <span class="hero-id__spark hero-id__spark--2"></span>
+              <span class="hero-id__spark hero-id__spark--3"></span>
+              <span class="hero-id__spark hero-id__spark--4"></span>
+            </div>
+          </div>
+
+          <span class="hero__orb hero__orb--1"></span>
+          <span class="hero__orb hero__orb--2"></span>
+          <span class="hero__orb hero__orb--3"></span>
+
+          <span class="float-tag float-tag--1"><span data-icon="search"></span>Question</span>
+          <span class="float-tag float-tag--2"><span data-icon="database"></span>Evidence</span>
+          <span class="float-tag float-tag--3"><span data-icon="lightbulb"></span>Insight</span>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about"><span>Scroll</span><span class="scroll-cue__line"></span><span class="visually-hidden">to About Me</span></a>
+      <div class="tear-stack" aria-hidden="true"><div class="tear tear--teal"></div><div class="tear tear--paper tear--flip"></div></div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="kicker__num">01</span>About me</p>
+          <h2 class="section-title" id="about-title">Behind the data.</h2>
+          <p class="section-sub">A Student. A Researcher at Heart. A Future Data Analyst.</p>
+        </header>
+
+        <div class="about">
+          <article class="paper notebook about__bio reveal" data-field-paragraphs="aboutBio">
+            <p>I am Arian Jay G. Maala, a Bachelor of Science in Computer Science student at Biliran Province State University. My academic journey has been shaped by a strong commitment to learning, research, leadership, and continuous improvement.</p>
+            <p>I am particularly interested in research because it allows me to investigate problems, examine evidence, analyze information, and develop meaningful conclusions. I believe that data becomes more valuable when it is transformed into insights that help people understand problems and make informed decisions.</p>
+            <p>My background in Computer Science has encouraged me to explore the intersection of technology, statistics, data analysis, and machine learning. I am continuously developing my technical skills while seeking opportunities to apply analytical thinking to real-world problems.</p>
+            <p>Beyond academics, my involvement in student leadership has strengthened my communication, collaboration, organization, and problem-solving abilities.</p>
+            <p>My long-term goal is to become a Data Analyst who can combine research, technical knowledge, and analytical skills to support evidence-based decision-making and contribute to meaningful projects.</p>
+          </article>
+
+          <div class="about__side">
+            <ul class="identity-grid" data-list="identityCards" aria-label="Professional identity"></ul>
+            <div class="languages paper reveal">
+              <h3 class="mini-title"><span data-icon="globe"></span>Languages I use</h3>
+              <ul class="tag-list" data-list="languages"></ul>
+            </div>
+          </div>
+        </div>
+
+        <figure class="goal-quote reveal">
+          <span class="tape tape--center"></span>
+          <blockquote data-field="careerGoal">My goal is to transform data into knowledge, knowledge into insights, and insights into meaningful decisions.</blockquote>
+          <figcaption class="hand">— my career goal</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== EDUCATION ============================== -->
+    <section id="education" class="section section--alt" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="kicker__num">02</span>Education</p>
+          <h2 class="section-title" id="education-title">Learning, on record.</h2>
+          <p class="section-sub">An academic path built on consistency, curiosity, and recognition.</p>
+        </header>
+        <ol class="timeline" data-list="education"></ol>
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS ============================== -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="kicker__num">03</span>Skills</p>
+          <h2 class="section-title" id="skills-title">The analyst's toolkit.</h2>
+          <p class="section-sub">Technical, research, creative, and interpersonal skills — listed as they are, without inflated ratings.</p>
+        </header>
+        <div class="skills" data-list="skillCategories"></div>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section id="projects" class="section section--ink" aria-labelledby="projects-title">
+      <div class="tear tear--navy tear--top" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head section-head--light reveal">
+          <p class="kicker"><span class="kicker__num">04</span>Research &amp; projects</p>
+          <h2 class="section-title" id="projects-title">Curious about the why. <span class="text-cyan">Driven by the data.</span></h2>
+          <p class="section-sub">Research is more than collecting information. It is the process of asking meaningful questions, examining evidence, discovering patterns, and developing insights that can contribute to better decisions.</p>
+        </header>
+
+        <div class="research-log reveal" data-research>
+          <div class="sub-head">
+            <h3 class="sub-head__title">Research &amp; thesis papers</h3>
+            <p class="sub-head__text">Studies I have written from senior high school through college — qualitative, quantitative, developmental, and action research.</p>
+          </div>
+          <div class="research-stats" data-research-stats></div>
+          <p class="visually-hidden" aria-live="polite" data-research-count></p>
+          <ol class="paper-list" data-research-list></ol>
+          <button class="btn btn--outline research-more" type="button" data-research-more hidden></button>
+        </div>
+
+        <div class="sub-head">
+          <h3 class="sub-head__title">Project Software</h3>
+          <p class="sub-head__text">I have developed various software solutions driven by research and technology, creating meaningful impact and fostering innovation within our institution.</p>
+        </div>
+        <ul class="project-grid" data-project-grid></ul>
+      </div>
+      <div class="tear tear--paper" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================== EXPERIENCE ============================== -->
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="kicker__num">05</span>Experience</p>
+          <h2 class="section-title" id="experience-title">Relevant experience.</h2>
+          <p class="section-sub">Hands-on work that built organization, attention to detail, documentation, communication, and responsibility.</p>
+        </header>
+        <ol class="exp-timeline" data-list="experiences:professional"></ol>
+      </div>
+    </section>
+
+    <!-- ============================== ACHIEVEMENTS ============================== -->
+    <section id="achievements" class="section section--alt" aria-labelledby="achievements-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="kicker__num">06</span>Competitions &amp; achievements</p>
+          <h2 class="section-title" id="achievements-title">Recognized along the way.</h2>
+          <p class="section-sub">Competitions and academic recognition across international, regional, division, and institutional levels.</p>
+        </header>
+        <div class="achievements" data-list="achievements"></div>
+      </div>
+    </section>
+
+    <!-- ============================== LEADERSHIP ============================== -->
+    <section id="leadership" class="section" aria-labelledby="leadership-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="kicker__num">07</span>Leadership</p>
+          <h2 class="section-title" id="leadership-title">Leading with purpose.</h2>
+          <p class="section-sub">Student leadership has strengthened my ability to collaborate, communicate, organize activities, and work toward shared goals.</p>
+        </header>
+        <ol class="lead-grid" data-list="experiences:leadership"></ol>
+      </div>
+    </section>
+
+    <!-- ============================== TRAININGS ============================== -->
+    <section id="trainings" class="section section--alt" aria-labelledby="trainings-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="kicker__num">08</span>Trainings &amp; development</p>
+          <h2 class="section-title" id="trainings-title">Always in training.</h2>
+          <p class="section-sub">Leadership training, skill-development workshops, seminars, and webinars — continuous learning beyond the classroom.</p>
+        </header>
+        <div class="achievements" data-list="trainings"></div>
+      </div>
+    </section>
+
+    <!-- ============================== CAREER VISION ============================== -->
+    <section id="vision" class="section section--teal" aria-labelledby="vision-title">
+      <div class="tear tear--deep tear--top" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head section-head--light reveal">
+          <p class="kicker"><span class="kicker__num">09</span>Career vision</p>
+          <h2 class="section-title" id="vision-title">Turning questions into insights.</h2>
+          <p class="section-sub" data-field="visionText">My ambition is to become a Data Analyst who uses research, statistics, technology, and critical thinking to transform data into meaningful insights.</p>
+        </header>
+
+        <div class="flow reveal" data-flow>
+          <ol class="flow__steps" data-list="visionSteps" aria-label="From question to decision"></ol>
+          <p class="flow__detail" data-flow-detail aria-live="polite"></p>
+        </div>
+
+        <ul class="principles" data-list="careerPrinciples"></ul>
+      </div>
+      <div class="tear tear--paper" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================== RESUME & CV ============================== -->
+    <section id="documents" class="section section--alt" aria-labelledby="documents-title" hidden>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="kicker__num">10</span>Résumé &amp; CV</p>
+          <h2 class="section-title" id="documents-title">My résumé and curriculum vitae.</h2>
+          <p class="section-sub">Open either one to read it here. They are view-only and can't be downloaded.</p>
+        </header>
+        <ul class="doc-cards" data-documents></ul>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker"><span class="kicker__num">11</span>Contact</p>
+          <h2 class="section-title" id="contact-title">Let's connect.</h2>
+          <p class="section-sub" data-field="contactText">I am open to opportunities to learn, collaborate, participate in research, and develop projects involving technology and data analysis.</p>
+        </header>
+
+        <div class="contact">
+          <aside class="contact__card paper reveal" aria-label="Contact details">
+            <span class="tape tape--tl"></span>
+            <p class="contact__name" data-field="fullName">Arian Jay G. Maala</p>
+            <ul class="contact__list">
+              <li><span data-icon="mail"></span><a data-contact="email" href="mailto:arianmaala19@gmail.com">arianmaala19@gmail.com</a></li>
+              <li><span data-icon="phone"></span><a data-contact="phone" href="tel:+639544856075">+63 954 485 6075</a></li>
+              <li><span data-icon="map-pin"></span><span data-field="location">Cabucgayan, Biliran, Philippines</span></li>
+            </ul>
+            <ul class="contact__list contact__list--social" data-socials-named aria-label="Social media accounts"></ul>
+          </aside>
+
+          <form class="contact-form paper reveal" id="contact-form" novalidate aria-describedby="contact-privacy">
+            <noscript><p class="form-status form-status--error">The contact form needs JavaScript. You can email me directly at arianmaala19@gmail.com.</p></noscript>
+            <div class="form-grid">
+              <div class="field">
+                <label for="cf-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                <input id="cf-name" name="fullName" type="text" autocomplete="name" required minlength="2" maxlength="100" aria-describedby="cf-name-error">
+                <p class="field__error" id="cf-name-error"></p>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby="cf-email-error">
+                <p class="field__error" id="cf-email-error"></p>
+              </div>
+              <div class="field field--full">
+                <label for="cf-subject">Subject <span class="req" aria-hidden="true">*</span></label>
+                <input id="cf-subject" name="subject" type="text" required minlength="3" maxlength="150" aria-describedby="cf-subject-error">
+                <p class="field__error" id="cf-subject-error"></p>
+              </div>
+              <div class="field field--full">
+                <label for="cf-message">Message <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="cf-message" name="message" rows="6" required minlength="20" maxlength="2000" aria-describedby="cf-message-hint cf-message-error"></textarea>
+                <div class="field__meta">
+                  <p class="field__error" id="cf-message-error"></p>
+                  <p class="field__hint" id="cf-message-hint"><span data-char-count>0</span> / 2000 characters (minimum 20)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn--primary btn--lg" type="submit" data-submit><span data-icon="send"></span><span data-submit-label>Open in Email App</span></button>
+              <p class="form-note" id="contact-privacy">Nothing is stored on this site. Your message opens in your own email app, where you can review and send it.</p>
+            </div>
+            <div class="form-status" data-form-status role="status" aria-live="polite" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer">
+    <div class="tear tear--deep tear--top" aria-hidden="true"></div>
+    <div class="footer__inner container">
+      <div class="footer__brand">
+        <p class="footer__name" data-field="fullName">Arian Jay G. Maala</p>
+        <p class="footer__roles"><span>Computer Science Student</span><span>Research Enthusiast</span><span>Aspiring Data Analyst</span></p>
+        <a class="footer__email" data-contact="email" href="mailto:arianmaala19@gmail.com">arianmaala19@gmail.com</a>
+        <ul class="social-list social-list--footer" data-socials aria-label="Social profiles"></ul>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Research &amp; Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li data-documents-link hidden><a href="#documents">Résumé &amp; CV</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> <span data-footer-name>Arian Jay G. Maala</span>. All rights reserved.</p>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <a class="back-to-top" href="#home" data-back-to-top aria-label="Back to top"><span data-icon="arrow-up"></span></a>
+  </footer>
+</body>
+</html>
