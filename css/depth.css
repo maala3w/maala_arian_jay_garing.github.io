@@ -1,0 +1,344 @@
+/* =====================================================================
+   depth.css · the 3D layer, loaded after the other stylesheets.
+   Everything is built from theme tokens, so all colour themes follow.
+   Pointer movement is driven by js/depth.js.
+   ===================================================================== */
+
+:root {
+  --edge: color-mix(in srgb, var(--navy) 26%, var(--gray));
+  --edge-stack: 0 1px 0 var(--edge), 0 2px 0 var(--edge), 0 3px 0 var(--edge), 0 4px 0 var(--edge);
+  --shadow-paper:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9), var(--edge-stack),
+    0 16px 26px -12px rgba(var(--navy-rgb), 0.34), 0 38px 56px -30px rgba(var(--navy-rgb), 0.3);
+  --shadow-lift:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9), var(--edge-stack),
+    0 24px 36px -14px rgba(var(--navy-rgb), 0.42), 0 52px 70px -34px rgba(var(--navy-rgb), 0.36);
+  --gloss:
+    radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.72) 0, rgba(255, 255, 255, 0.14) 28%, transparent 46%),
+    radial-gradient(circle at 62% 80%, rgba(0, 0, 0, 0.26), transparent 62%);
+  --ball-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.2), 0 5px 9px -2px rgba(var(--navy-rgb), 0.45);
+  --key-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), inset 0 -3px 0 rgba(0, 0, 0, 0.16), 0 6px 10px -3px rgba(var(--navy-rgb), 0.45);
+  --u: clamp(1.5px, calc((100vw - 280px) * 0.002), 2.1px); /* one unit of the 3D chart */
+  --cast: var(--navy-rgb); /* colour of shadows cast by lifted cards */
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* A closer match to a real spring where the browser supports it. */
+@supports (transition-timing-function: linear(0, 1)) {
+  :root { --spring: linear(0, 0.009, 0.035 2.1%, 0.141, 0.281 6.7%, 0.723 12.9%, 0.938 16.7%, 1.017, 1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, 0.991, 0.977 51%, 0.974 53.8%, 0.975 57.1%, 0.997 69.8%, 1.003 76.9%, 1.004 83.8%, 1); }
+}
+.section--ink, .section--teal { --cast: 0, 0, 0; }
+
+/* ---------------------------------------------------------------------
+   Extruded type
+   --------------------------------------------------------------------- */
+.hero__name {
+  text-shadow:
+    1px 1px 0 var(--teal), 2px 2px 0 var(--teal), 3px 3px 0 var(--teal), 4px 4px 0 var(--teal), 5px 5px 0 var(--teal),
+    6px 6px 0 var(--teal-deep), 12px 16px 18px rgba(var(--navy-rgb), 0.3);
+}
+/* Gradient text is transparent, so a text-shadow would show through it. */
+.hero__name-line--accent {
+  text-shadow: none;
+  filter: drop-shadow(1px 1px 0 var(--navy)) drop-shadow(1px 1px 0 var(--navy)) drop-shadow(1px 1px 0 var(--navy)) drop-shadow(1px 1px 0 var(--navy)) drop-shadow(6px 8px 7px rgba(var(--navy-rgb), 0.3));
+}
+.section-title { text-shadow: 1px 1px 0 var(--cyan), 2px 2px 0 var(--cyan), 3px 3px 0 var(--teal), 5px 8px 10px rgba(var(--navy-rgb), 0.18); }
+.section-head--light .section-title { text-shadow: 1px 1px 0 var(--teal), 2px 2px 0 var(--teal), 3px 3px 0 var(--teal-deep), 5px 8px 12px rgba(0, 0, 0, 0.4); }
+.section-title::after { box-shadow: 0 3px 0 color-mix(in srgb, var(--yellow) 62%, var(--navy)); }
+.footer__name, .research-stats__num { text-shadow: 1px 1px 0 var(--navy), 2px 2px 0 var(--navy), 3px 3px 0 var(--navy), 5px 8px 10px rgba(0, 0, 0, 0.3); }
+.status-page__code { text-shadow: 2px 2px 0 var(--teal-deep), 4px 4px 0 var(--teal-deep), 6px 6px 0 var(--navy), 12px 16px 18px rgba(var(--navy-rgb), 0.3); }
+
+/* ---------------------------------------------------------------------
+   Hero scene
+   --------------------------------------------------------------------- */
+.hero__grid { position: relative; z-index: 1; }
+
+/* Graph-paper floor running back towards the horizon */
+.hero::before {
+  content: ''; position: absolute; left: -30%; right: -30%; bottom: -4%; height: 60%;
+  background-image:
+    linear-gradient(rgba(var(--teal-rgb), 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--teal-rgb), 0.3) 1px, transparent 1px);
+  background-size: 56px 56px;
+  transform: perspective(620px) rotateX(70deg);
+  transform-origin: 50% 100%;
+  -webkit-mask: linear-gradient(transparent, #000 75%);
+          mask: linear-gradient(transparent, #000 75%);
+  pointer-events: none;
+}
+
+.hero__visual {
+  --rx: 8deg; --ry: -14deg; --sx: -12px;
+  transform-style: preserve-3d;
+  transform: perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry));
+}
+.hero__blob { translate: 0 0 -90px; }
+.hero__dots { translate: 0 0 -130px; }
+
+.photo-card {
+  top: -5%; left: -2%;
+  translate: 0 0 70px;
+  box-shadow:
+    inset 0 1px 0 #fff, var(--edge-stack), 0 5px 0 var(--edge), 0 6px 0 var(--edge),
+    var(--sx) 30px 40px -12px rgba(var(--navy-rgb), 0.5);
+}
+/* One line only: a wrapped caption would run up onto the dark photo and vanish. */
+.photo-card__caption { font-size: clamp(0.9rem, 1.2vw, 1.25rem); white-space: nowrap; }
+.photo-card .tape--br { bottom: -20px; right: -30px; }
+.float-tag {
+  translate: 0 0 130px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 4px 0 var(--navy), var(--sx) 18px 18px -6px rgba(var(--navy-rgb), 0.45);
+}
+.float-tag--1 { top: -3%; right: 18%; }
+.float-tag--2 { top: 64%; left: 6%; translate: 0 0 110px; }
+.float-tag--3 { top: 12%; right: -5%; }
+
+.hero__orb {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  background-color: var(--cyan); background-image: var(--gloss);
+  box-shadow: inset -6px -8px 14px rgba(var(--navy-rgb), 0.35), var(--sx) 16px 20px -6px rgba(var(--navy-rgb), 0.35);
+}
+.hero__orb--1 { top: 0; left: 62%; width: 46px; height: 46px; translate: 0 0 30px; }
+.hero__orb--2 { top: 58%; left: 2%; width: 28px; height: 28px; translate: 0 0 110px; background-color: var(--yellow); }
+.hero__orb--3 { bottom: 0; left: 30%; width: 62px; height: 62px; translate: 0 0 -40px; background-color: var(--teal); }
+
+/* The chart: a floating tile with six solid bars */
+.chart-card { right: -7%; bottom: -12%; transform-style: preserve-3d; translate: 0 0 100px; }
+/* On shorter screens the content reaches the bottom of the hero, leaving no room for the cue. */
+@media (max-height: 940px) { .scroll-cue { display: none; } }
+.chart-card__label { translate: 0 0 40px; text-shadow: 0 1px 0 var(--white), 0 0 8px var(--paper); }
+.bars3d {
+  position: relative; width: calc(var(--u) * 100); height: calc(var(--u) * 72); margin: calc(var(--u) * 26) 0 calc(var(--u) * 6) auto;
+  background-color: var(--white);
+  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: calc(var(--u) * 12) calc(var(--u) * 12);
+  transform-style: preserve-3d;
+  transform: rotateX(58deg) rotateZ(38deg);
+}
+.bars3d::before, .bars3d::after { content: ''; position: absolute; background: var(--edge); }
+.bars3d::before { /* front edge of the tile */
+  left: 0; top: 100%; width: 100%; height: calc(var(--u) * 7);
+  background: color-mix(in srgb, var(--navy) 45%, var(--gray));
+  transform-origin: top; transform: rotateX(-90deg);
+}
+.bars3d::after { /* right edge of the tile */
+  left: 100%; top: 0; width: calc(var(--u) * 7); height: 100%;
+  transform-origin: left; transform: rotateY(90deg);
+}
+.bar3d {
+  --h: 40; --face: var(--teal);
+  --size: calc(var(--u) * 20); --height: calc(var(--u) * var(--h));
+  position: absolute; width: var(--size); height: var(--size);
+  transform-style: preserve-3d;
+}
+.bar3d:nth-child(even) { --face: var(--cyan); }
+.bar3d:nth-child(1) { left: calc(var(--u) * 8);  top: calc(var(--u) * 8);  --h: 38; }
+.bar3d:nth-child(2) { left: calc(var(--u) * 40); top: calc(var(--u) * 8);  --h: 52; }
+.bar3d:nth-child(3) { left: calc(var(--u) * 72); top: calc(var(--u) * 8);  --h: 44; }
+.bar3d:nth-child(4) { left: calc(var(--u) * 8);  top: calc(var(--u) * 44); --h: 60; }
+.bar3d:nth-child(5) { left: calc(var(--u) * 40); top: calc(var(--u) * 44); --h: 72; }
+.bar3d:nth-child(6) { left: calc(var(--u) * 72); top: calc(var(--u) * 44); --h: 90; --face: var(--yellow); }
+.bar3d b { position: absolute; display: block; }
+.bar3d b:nth-child(1) { /* top */
+  inset: 0; transform: translateZ(var(--height));
+  background: color-mix(in srgb, var(--face) 72%, white);
+}
+.bar3d b:nth-child(2) { /* front */
+  left: 0; top: 100%; width: 100%; height: var(--height);
+  background: linear-gradient(color-mix(in srgb, var(--face) 88%, var(--navy)), color-mix(in srgb, var(--face) 60%, var(--navy)));
+  transform-origin: top; transform: rotateX(90deg);
+}
+.bar3d b:nth-child(3) { /* side */
+  left: 100%; top: 0; width: var(--height); height: 100%;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--face) 52%, var(--navy)), color-mix(in srgb, var(--face) 70%, var(--navy)));
+  transform-origin: left; transform: rotateY(-90deg);
+}
+
+@keyframes bar-grow { from { transform: scaleZ(0.01); } to { transform: scaleZ(1); } }
+@keyframes orb-drift { from { transform: translateY(0); } to { transform: translateY(-14px); } }
+
+/* ---------------------------------------------------------------------
+   Pressable buttons
+   --------------------------------------------------------------------- */
+/* The key moves while the bottom edge of its side stays planted: travel and side height always
+   add up to 5px. Going down is quick; coming back up is sprung. */
+.btn {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 55%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 5px 0 var(--btn-shadow), 0 14px 18px -6px rgba(var(--navy-rgb), 0.45);
+  transition: transform 0.55s var(--spring), box-shadow 0.55s var(--spring), background-color 0.18s;
+}
+.btn:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0) 55%);
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 7px 0 var(--btn-shadow), 0 20px 22px -8px rgba(var(--navy-rgb), 0.45);
+}
+.btn:active {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 55%);
+  transform: translateY(4px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 1px 0 var(--btn-shadow), 0 3px 5px rgba(var(--navy-rgb), 0.35);
+  transition-duration: 0.07s; transition-timing-function: ease-out;
+}
+.btn[disabled] { box-shadow: 0 5px 0 var(--btn-shadow); }
+
+.filter-btn, .research-filter, .skill-tile, .social-list a, .back-to-top, .sidebar__nav a {
+  transition: transform 0.55s var(--spring), box-shadow 0.25s ease, background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.25s, visibility 0.25s;
+}
+.filter-btn:hover, .research-filter:hover { transform: translateY(-2px); box-shadow: 0 7px 10px -5px rgba(0, 0, 0, 0.5); }
+.skill-tile:hover { transform: translateY(-3px); box-shadow: 0 2px 0 var(--edge), 0 12px 14px -8px rgba(var(--cast), 0.45); }
+.social-list a { box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.14), 0 2px 3px rgba(0, 0, 0, 0.2); }
+.social-list a:hover { transform: translateY(-3px); box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.14), 0 9px 11px -3px rgba(0, 0, 0, 0.4); }
+.sidebar__nav a:hover { transform: translateX(3px); }
+.filter-btn:active, .research-filter:active, .skill-tile:active, .social-list a:active, .sidebar__nav a:active {
+  transform: translateY(1px); box-shadow: none;
+  transition-duration: 0.07s; transition-timing-function: ease-out;
+}
+
+.filter-btn[aria-pressed='true'], .research-filter[aria-pressed='true'] { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 3px 0 color-mix(in srgb, var(--yellow) 58%, var(--navy)); }
+.flow__detail { box-shadow: inset 0 1px 0 #fff, 0 5px 0 var(--navy), 0 18px 22px -8px rgba(0, 0, 0, 0.4); }
+.data-source-note { box-shadow: 0 4px 0 var(--navy), 0 14px 18px -8px rgba(var(--navy-rgb), 0.4); }
+
+/* ---------------------------------------------------------------------
+   Spheres and raised icon keys
+   --------------------------------------------------------------------- */
+.kicker__num, .timeline__marker, .ach-group__icon, .recognition__icon, .principle__icon, .flow__dot, .back-to-top, .exp-item::after {
+  background-image: var(--gloss);
+}
+.kicker__num, .ach-group__icon, .recognition__icon, .principle__icon, .exp-item::after { box-shadow: var(--ball-shadow); }
+.timeline__marker { box-shadow: 0 0 0 2px var(--teal-deep), var(--ball-shadow); }
+.timeline__item:first-child .timeline__marker { box-shadow: 0 0 0 2px var(--navy), var(--ball-shadow); }
+.flow__dot { box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.25), 0 10px 16px -4px rgba(0, 0, 0, 0.4); }
+.flow__btn[aria-pressed='true'] .flow__dot {
+  background-image: var(--gloss);
+  box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 0 0 8px rgba(var(--yellow-rgb), 0.2), 0 16px 22px -4px rgba(0, 0, 0, 0.45);
+}
+.back-to-top { box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.2), 0 4px 0 var(--navy), 0 12px 16px -4px rgba(var(--navy-rgb), 0.45); }
+.back-to-top:hover { transform: translateY(-2px); box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.2), 0 6px 0 var(--navy), 0 18px 18px -6px rgba(var(--navy-rgb), 0.45); }
+.back-to-top:active { transform: translateY(3px); box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.2), 0 1px 0 var(--navy), 0 3px 5px rgba(var(--navy-rgb), 0.4); transition-duration: 0.07s; }
+.avatar { box-shadow: inset 0 -5px 12px rgba(0, 0, 0, 0.35), inset 0 3px 6px rgba(255, 255, 255, 0.25); }
+.avatar--lg { box-shadow: inset 0 -5px 12px rgba(0, 0, 0, 0.35), inset 0 3px 6px rgba(255, 255, 255, 0.25), 0 0 0 7px rgba(var(--cyan-rgb), 0.14), 0 14px 22px rgba(0, 0, 0, 0.4); }
+
+.identity-card__icon, .skill-card__icon, .contact__list [data-icon] {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 60%);
+  box-shadow: var(--key-shadow);
+}
+.project-cover__icon { filter: drop-shadow(1px 1px 0 rgba(var(--navy-rgb), 0.8)) drop-shadow(2px 2px 0 rgba(var(--navy-rgb), 0.6)) drop-shadow(5px 8px 7px rgba(0, 0, 0, 0.35)); }
+.distinction, .paper-card__year, .chip:not(.chip--outline, .chip--muted, .chip--soft) { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 2px 0 rgba(var(--navy-rgb), 0.35); }
+.distinction--participant { box-shadow: inset 0 0 0 1.5px var(--navy); }
+
+.research-bar { box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4); }
+.research-bar__seg { background-image: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0) 45%, rgba(0, 0, 0, 0.22)); }
+.research-stats { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 20px 30px -18px rgba(0, 0, 0, 0.6); }
+
+/* Light falling from above on the dark bands */
+.section--ink {
+  background-image: radial-gradient(ellipse 90% 45% at 50% 0, rgba(var(--cyan-rgb), 0.16), transparent 70%), var(--noise), var(--graph-light);
+  background-size: auto, 180px 180px, 28px 28px, 28px 28px;
+}
+.section--teal {
+  background-image:
+    radial-gradient(ellipse 90% 45% at 50% 0, rgba(255, 255, 255, 0.16), transparent 70%), var(--noise),
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: auto, 180px 180px, 28px 28px, 28px 28px;
+}
+
+/* Sidebar: raised active link */
+.sidebar { box-shadow: 10px 0 34px rgba(var(--navy-rgb), 0.34); }
+.sidebar__nav a.is-active { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 3px 0 rgba(0, 0, 0, 0.25), 0 8px 12px -4px rgba(0, 0, 0, 0.4); }
+
+/* ---------------------------------------------------------------------
+   Cards
+   --------------------------------------------------------------------- */
+.project-card, .paper-card { box-shadow: inset 0 1px 0 #fff, var(--edge-stack), 0 22px 36px -16px rgba(0, 0, 0, 0.65); }
+.project-card:hover, .project-card:focus-within { box-shadow: inset 0 1px 0 #fff, var(--edge-stack), 0 32px 46px -18px rgba(0, 0, 0, 0.7); }
+
+.identity-card, .timeline__card, .skill-card, .project-card, .paper-card, .exp-card,
+.lead-card, .ach-card, .training-card, .principle, .recognition, .contact__card {
+  position: relative;
+  transition: transform 0.5s var(--ease), box-shadow 0.3s var(--ease);
+}
+/* Cards that don't clip their contents can lift their icons and labels off the surface. */
+.identity-card, .timeline__card, .skill-card, .exp-card, .ach-card, .principle, .recognition, .contact__card { transform-style: preserve-3d; }
+.identity-card__icon, .skill-card__icon, .principle__icon, .recognition__icon, .distinction, .exp-card .chip, .timeline__head .chip {
+  transition: translate 0.6s var(--spring), transform 0.3s var(--ease), background-color 0.3s;
+}
+.is-tilting .identity-card__icon, .is-tilting .skill-card__icon, .is-tilting .principle__icon,
+.is-tilting .recognition__icon, .is-tilting .distinction, .is-tilting .timeline__head .chip { translate: 0 0 20px; }
+.is-pressed .identity-card__icon, .is-pressed .skill-card__icon, .is-pressed .principle__icon,
+.is-pressed .recognition__icon, .is-pressed .distinction, .is-pressed .timeline__head .chip { translate: 0 0 6px; transition-duration: 0.1s; }
+/* A rigid card's icon doesn't spin or grow on its own. */
+.identity-card:hover .identity-card__icon { transform: none; }
+/* Clipped cards can't lift their contents, so the cover icon drifts with the tilt instead. */
+.project-cover__icon { translate: calc(var(--tx, 0) * 9px) calc(var(--ty, 0) * 9px); }
+
+/* Light on the surface: brightest where the pointer is, falling off into soft shade on the far side. */
+.identity-card::after, .timeline__card::after, .skill-card::after, .project-card::after, .paper-card::after, .exp-card::after,
+.lead-card::after, .ach-card::after, .training-card::after, .principle::after, .recognition::after, .contact__card::after {
+  content: ''; position: absolute; inset: 0; z-index: 3; border-radius: inherit; pointer-events: none;
+  background:
+    radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.5), transparent 42%),
+    radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), transparent 40%, rgba(var(--navy-rgb), 0.1) 110%);
+  opacity: 0; transition: opacity 0.35s;
+}
+.is-tilting::after { opacity: 1; }
+
+/* While a card is on its spring, js/depth.js moves it every frame, so transitions must stay out of the way.
+   The cast shadow has two parts: a tight one near the card and a soft one that spreads with height. */
+.js .is-sprung {
+  transition: opacity 0.75s var(--ease) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9), var(--edge-stack),
+    calc(var(--sx, 0px) * 0.4) calc(var(--sy, 0px) * 0.4 + 8px + var(--lift, 0) * 0.25px) calc(12px + var(--lift, 0) * 0.3px) -6px rgba(var(--cast), 0.28),
+    var(--sx, 0px) calc(var(--sy, 0px) + 18px + var(--lift, 0) * 1px) calc(30px + var(--lift, 0) * 1.6px) -12px rgba(var(--cast), 0.42);
+}
+
+/* Touch screens have no pointer to tilt towards, so cards only respond to a press. */
+@media (hover: none) {
+  .identity-card:hover, .paper-card:hover, .ach-card:hover, .project-card:hover { transform: none; }
+  .identity-card:active, .timeline__card:active, .skill-card:active, .project-card:active, .paper-card:active, .exp-card:active,
+  .lead-card:active, .ach-card:active, .training-card:active, .principle:active, .recognition:active, .contact__card:active {
+    transform: scale(0.985); transition-duration: 0.1s;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Motion
+   --------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  /* Sections swing up out of the page as they scroll in. */
+  .js .reveal {
+    transform: perspective(1200px) translateY(46px) translateZ(-70px) rotateX(16deg);
+    transform-origin: 50% 100%;
+    transition: opacity 0.8s var(--ease), transform 0.9s var(--ease);
+  }
+  .js .reveal.is-visible { transform: none; }
+
+  .hero__orb { animation: orb-drift 4.4s ease-in-out infinite alternate; }
+  .hero__orb--2 { animation-delay: -1.5s; animation-duration: 3.6s; }
+  .hero__orb--3 { animation-delay: -2.8s; animation-duration: 5.2s; }
+  .js .bar3d { animation: bar-grow 1.1s 0.5s var(--ease) both; }
+  .js .bar3d:nth-child(2) { animation-delay: 0.6s; }
+  .js .bar3d:nth-child(3) { animation-delay: 0.7s; }
+  .js .bar3d:nth-child(4) { animation-delay: 0.8s; }
+  .js .bar3d:nth-child(5) { animation-delay: 0.9s; }
+  .js .bar3d:nth-child(6) { animation-delay: 1s; }
+}
+
+/* ---------------------------------------------------------------------
+   Smaller screens and print
+   --------------------------------------------------------------------- */
+@media (max-width: 1024px) { :root { --u: 1.8px; } }
+
+@media (max-width: 640px) {
+  :root { --u: 1.5px; }
+  .hero__name { text-shadow: 1px 1px 0 var(--teal), 2px 2px 0 var(--teal), 3px 3px 0 var(--teal-deep), 6px 9px 10px rgba(var(--navy-rgb), 0.28); }
+  .hero__name-line--accent { text-shadow: none; filter: drop-shadow(1px 1px 0 var(--navy)) drop-shadow(1px 1px 0 var(--navy)) drop-shadow(3px 5px 4px rgba(var(--navy-rgb), 0.28)); }
+  .float-tag { translate: 0 0 70px; }
+  .float-tag--2 { left: 2%; translate: 0 0 80px; }
+  .float-tag--3 { right: 0; }
+  .chart-card { right: 0; }
+}
+
+@media print {
+  .hero__name, .hero__name-line, .section-title, .footer__name, .research-stats__num, .status-page__code { text-shadow: none !important; filter: none !important; }
+  .hero::before { display: none; }
+  .paper, .project-card, .paper-card { box-shadow: none !important; }
+}

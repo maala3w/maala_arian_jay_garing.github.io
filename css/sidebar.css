@@ -1,0 +1,37 @@
+/* =====================================================================
+   sidebar.css · desktop and laptop: hide the sidebar for a full-width view.
+   Controlled by js/sidebar.js; the choice is applied before first paint by js/boot.js.
+   ===================================================================== */
+
+.sidebar-toggle { display: none; }
+
+@media (min-width: 1025px) {
+  .sidebar-toggle {
+    position: fixed; top: 1rem; left: calc(var(--sidebar-w) - 17px); z-index: 60;
+    display: grid; place-items: center; width: 34px; height: 34px; padding: 0;
+    color: var(--navy); background: var(--yellow);
+    border: 2px solid var(--navy); border-radius: 50%;
+    box-shadow: 2px 2px 0 var(--navy);
+    cursor: pointer;
+    transition: left 0.38s var(--ease), transform 0.2s var(--ease), background-color 0.2s;
+  }
+  .sidebar-toggle:hover { transform: scale(1.08); background: var(--cyan); }
+  .sidebar-toggle:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+  .sidebar-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.38s var(--ease); }
+
+  .sidebar { transition: transform 0.38s var(--ease), visibility 0s; }
+  .main, .footer { transition: margin-left 0.38s var(--ease); }
+  .data-source-note { transition: left 0.38s var(--ease); }
+
+  /* Hidden: the sidebar slides out, the page takes the full width, and the button waits in the corner. */
+  html.sidebar-hidden .sidebar { transform: translateX(calc(-100% - 8px)); visibility: hidden; transition: transform 0.38s var(--ease), visibility 0s 0.38s; }
+  html.sidebar-hidden .main, html.sidebar-hidden .footer { margin-left: 0; }
+  html.sidebar-hidden .data-source-note { left: 1rem; }
+  html.sidebar-hidden .sidebar-toggle { left: 1rem; }
+  html.sidebar-hidden .sidebar-toggle svg { transform: rotate(180deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar, .main, .footer, .sidebar-toggle, .sidebar-toggle svg, .data-source-note { transition: none !important; }
+}
+@media print { .sidebar-toggle { display: none !important; } }

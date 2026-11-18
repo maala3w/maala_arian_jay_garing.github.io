@@ -1,0 +1,29 @@
+/* =====================================================================
+   themes.css · finishing touches for the three black themes, loaded last.
+   The palettes themselves are in style.css.
+   ===================================================================== */
+
+/* Navy & Gold's main colour is blue, which turns muddy against gold, so its sidebar labels stay all gold. */
+:root[data-theme='gold'] .sidebar__name { background-image: linear-gradient(180deg, var(--cyan) 15%, var(--yellow) 85%); }
+:root[data-theme='gold'] .sidebar__label span:first-child {
+  filter: drop-shadow(0.6px 0 0 var(--yellow)) drop-shadow(-0.6px 0 0 var(--yellow)) drop-shadow(0 0.6px 0 var(--yellow)) drop-shadow(0 -0.6px 0 var(--yellow));
+}
+
+/* The Career Vision band is black with a glow of the theme's colour, not a solid colour fill. */
+:root[data-theme^='black-'] .section--teal {
+  background-color: var(--navy);
+  background-image:
+    radial-gradient(ellipse 90% 45% at 50% 0, rgba(var(--cyan-rgb), 0.2), transparent 70%), var(--noise),
+    linear-gradient(var(--grid-light) 1px, transparent 1px), linear-gradient(90deg, var(--grid-light) 1px, transparent 1px);
+}
+
+/* The light sweep that follows the mouse stays subtle on the dark Skills card. */
+:root[data-theme^='black-'] .skill-card--featured::after {
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.09), transparent 45%);
+}
+
+/* Gold reads as brown under white text, so its main buttons are bright gold with black text. */
+:root[data-theme='black-gold'] .btn--primary,
+:root[data-theme='black-gold'] .btn--primary:hover { color: #0E0D0B; }
+:root[data-theme='black-gold'] .btn--primary { background-color: var(--yellow); }
+:root[data-theme='black-gold'] .btn--primary:hover { background-color: var(--cyan); }

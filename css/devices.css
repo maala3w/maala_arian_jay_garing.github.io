@@ -1,0 +1,62 @@
+/* =====================================================================
+   devices.css · device-specific fixes, loaded last so they win.
+   ===================================================================== */
+
+/* Skill names stay inside their tiles: tiles drop to one column instead of squeezing. */
+.skill-tiles,
+.skill-card:not(.skill-card--featured) .skill-tiles { grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); }
+.skill-tile > span:last-child { min-width: 0; overflow-wrap: break-word; }
+
+/* Phone and tablet browsers: their address bars change the screen height, and the
+   chat's title and close button must stay below the top bar. */
+@supports (height: 100dvh) {
+  .chat-panel { height: min(520px, calc(100dvh - 11rem)); }
+}
+@media (max-width: 1024px) {
+  .chat-panel { height: min(520px, calc(100vh - 10rem - var(--topbar-h))); }
+  @supports (height: 100dvh) { .chat-panel { height: min(520px, calc(100dvh - 10rem - var(--topbar-h))); } }
+}
+
+/* Tablets and phones: keep the floating tags clear of the hero buttons. */
+@media (max-width: 900px) {
+  .hero__grid { gap: 4.5rem; }
+  .float-tag { translate: 0 0 70px; }
+  .float-tag--1 { top: 1%; }
+  .float-tag--2 { translate: 0 0 80px; }
+}
+
+/* Touch screens: links are easier to tap, and focusing a field does not zoom the page. */
+@media (pointer: coarse), (max-width: 1024px) {
+  .link-row a, .contact__list a, .footer__nav a, .footer__email, .footer__bottom a {
+    display: inline-flex; align-items: center; min-height: 44px;
+  }
+  .footer__nav ul { row-gap: 0; }
+  .footer__email { margin-block: 0.5rem; }
+  .chat-suggestion { min-height: 40px; }
+}
+@media (pointer: coarse) {
+  input:not([type='checkbox']):not([type='radio']), textarea, select { font-size: 16px; }
+}
+
+@media (max-width: 640px) {
+  .chat-panel { height: calc(100vh - 12rem); }
+  @supports (height: 100dvh) { .chat-panel { height: calc(100dvh - 12rem); } }
+}
+
+/* The smallest phones: the full name fits in the top bar. */
+@media (max-width: 360px) {
+  .topbar { gap: 0.25rem; padding-inline: 0.6rem 0.25rem; }
+  .topbar__brand { gap: 0.45rem; }
+  .topbar__name { font-size: 0.95rem; letter-spacing: 0.01em; }
+}
+
+/* Phones held sideways: there is little height, so the chat fills the screen. */
+@media (max-height: 500px) {
+  .chat-panel { top: 0.5rem; bottom: 0.5rem; height: auto; }
+  .chat-launcher { bottom: 4rem; }
+  .chat-suggestions { flex-wrap: nowrap; overflow-x: auto; }
+  .chat-suggestion { flex: none; }
+}
+@media (max-height: 500px) and (max-width: 1024px) {
+  .chat-panel { top: calc(var(--topbar-h) + 0.5rem); }
+}

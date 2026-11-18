@@ -1,0 +1,64 @@
+/* =====================================================================
+   doc-viewer.css · view-only résumé and CV viewer (js/documents.js).
+   ===================================================================== */
+
+.doc-viewer {
+  width: min(880px, calc(100vw - 2rem)); height: min(92vh, 1200px); max-width: none; max-height: none;
+  padding: 0; overflow: hidden;
+  color: var(--white); background: var(--navy);
+  border: 2px solid rgba(var(--cyan-rgb), 0.6); border-radius: var(--radius);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+}
+.doc-viewer[open] { display: flex; flex-direction: column; animation: doc-viewer-in 0.28s var(--ease) both; }
+.doc-viewer::backdrop { background: rgba(8, 18, 24, 0.72); backdrop-filter: blur(3px); }
+html.doc-viewer-open { overflow: hidden; }
+
+.doc-viewer__bar {
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+  padding: 0.7rem 0.8rem 0.7rem 1.1rem;
+  background-image: var(--graph-light); background-size: 24px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.doc-viewer__title { font-family: var(--font-head); font-size: 1.35rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--white); }
+.doc-viewer__badge {
+  display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.6rem;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--navy); background: var(--yellow); border-radius: 999px;
+}
+.doc-viewer__badge .ico { width: 0.95rem; height: 0.95rem; }
+.doc-viewer__count { margin-left: auto; font-size: 0.88rem; color: rgba(255, 255, 255, 0.75); }
+.doc-viewer__close {
+  display: grid; place-items: center; width: 40px; height: 40px; padding: 0;
+  color: var(--white); background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 50%; cursor: pointer;
+}
+.doc-viewer__close:hover { color: var(--navy); background: var(--yellow); }
+.doc-viewer__close:focus-visible, .doc-viewer__pages:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
+
+.doc-viewer__pages {
+  flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+  display: grid; gap: 1.1rem; justify-items: center; align-content: start;
+  padding: 1.1rem;
+  background: color-mix(in srgb, var(--navy) 80%, #000);
+  user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+}
+.doc-viewer__page { position: relative; width: 100%; max-width: 800px; }
+.doc-viewer__page img {
+  display: block; width: 100%; height: auto; aspect-ratio: 1240 / 1754;
+  background: #fff; border-radius: 4px; box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.6);
+  pointer-events: none; -webkit-user-drag: none;
+}
+/* A transparent layer over each page: long-press or right-click hits this, not the image. */
+.doc-viewer__shield { position: absolute; inset: 0; }
+
+@keyframes doc-viewer-in { from { opacity: 0; transform: translateY(14px) scale(0.98); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .doc-viewer[open] { animation: none; } }
+
+@media (max-width: 640px) {
+  .doc-viewer { width: 100vw; height: 100dvh; max-height: 100dvh; border-radius: 0; border: 0; }
+  .doc-viewer__pages { padding: 0.6rem; gap: 0.6rem; }
+  .doc-viewer__title { font-size: 1.1rem; }
+}
+
+/* Printing the page never prints the documents. */
+@media print { .doc-viewer, .doc-viewer::backdrop { display: none !important; } }

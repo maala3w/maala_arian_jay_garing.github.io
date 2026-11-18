@@ -1,0 +1,118 @@
+/* =====================================================================
+   mode.css · dark mode, and the Light / Dark buttons (js/mode.js)
+
+   In light mode --navy is both dark text and a dark surface, and --white is both a card surface
+   and text on dark. So the tokens swap only inside light content: text there turns light and
+   cards turn dark, and any element's own pairing of the two stays readable. The sidebar, footer,
+   and dark bands stay as they are. Everything derives from the active colour theme.
+   ===================================================================== */
+
+/* ---- Buttons ---- */
+.mode-switch { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem; padding: 0.25rem; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 10px; }
+.mode-switch__btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; min-height: 38px; padding: 0.3rem 0.5rem;
+  font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78); background: transparent; border: 0; border-radius: 7px; cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.mode-switch__btn:hover { color: var(--white); background: rgba(255, 255, 255, 0.1); }
+.mode-switch__btn[aria-pressed='true'] { color: var(--navy); background: var(--yellow); }
+
+/* On phones the menu is long, so the top bar has its own quick button. */
+.topbar__mode { margin-left: auto; color: var(--white); }
+.topbar__mode:hover { background: rgba(255, 255, 255, 0.08); }
+.topbar__mode:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
+
+/* ---- Dark palette ---- */
+:root[data-mode='dark'] {
+  --page: var(--dark-page, color-mix(in srgb, var(--navy) 38%, #05090C));
+  --card: var(--dark-card, color-mix(in srgb, var(--navy) 72%, #0A1216));
+  --card-raised: var(--dark-raised, color-mix(in srgb, var(--navy) 62%, #4A5F68));
+  --base-navy: var(--navy);
+  --base-teal-deep: var(--teal-deep);
+  --line: rgba(255, 255, 255, 0.13);
+  --line-strong: rgba(255, 255, 255, 0.28);
+  --edge: color-mix(in srgb, var(--navy) 55%, #000);
+  --shadow-paper: inset 0 1px 0 rgba(255, 255, 255, 0.07), var(--edge-stack), 0 16px 26px -12px rgba(0, 0, 0, 0.6);
+  --shadow-lift: inset 0 1px 0 rgba(255, 255, 255, 0.09), var(--edge-stack), 0 24px 36px -14px rgba(0, 0, 0, 0.7);
+}
+:root[data-mode='dark'] body { color: var(--dark-ink, #DDE8EB); background-color: var(--page); }
+
+:root[data-mode='dark'] .section:not(.section--ink, .section--teal),
+:root[data-mode='dark'] .hero,
+:root[data-mode='dark'] .page,
+:root[data-mode='dark'] .paper,
+:root[data-mode='dark'] .paper-card,
+:root[data-mode='dark'] .flow__detail,
+:root[data-mode='dark'] .goal-quote {
+  --navy: var(--dark-heading, #EAF3F5);
+  --white: var(--card);
+  --paper: var(--page);
+  --gray: var(--card-raised);
+  --ink: var(--dark-ink, #DDE8EB);
+  --ink-soft: var(--dark-soft, #B4C6CC);
+  --ink-faint: var(--dark-faint, #94A9B0);
+  --teal-deep: var(--cyan);
+  --teal-hover: color-mix(in srgb, var(--cyan) 82%, white);
+  --danger: #FF9A8F;
+  --success: #6FD9B8;
+}
+
+/* Elements on a bright or dark fill keep their dark text and normal colours. */
+:root[data-mode='dark'] .kicker__num,
+:root[data-mode='dark'] .badge,
+:root[data-mode='dark'] .distinction--gold,
+:root[data-mode='dark'] .distinction--silver,
+:root[data-mode='dark'] .principle__icon,
+:root[data-mode='dark'] .recognition__icon,
+:root[data-mode='dark'] .float-tag--2,
+:root[data-mode='dark'] .btn--yellow,
+:root[data-mode='dark'] .chart-card,
+:root[data-mode='dark'] .photo-card__frame {
+  --navy: var(--base-navy);
+}
+:root[data-mode='dark'] .skill-card--featured,
+:root[data-mode='dark'] .chat-panel__head,
+:root[data-mode='dark'] .lead-card__band {
+  --navy: var(--base-navy);
+  --white: #FFFFFF;
+  --teal-deep: var(--base-teal-deep);
+}
+:root[data-mode='dark'] .recognition__icon { background: var(--yellow); }
+
+/* The highlighter only covers part of each letter, so the text stays light over a softer stroke. */
+:root[data-mode='dark'] .hero__role--marked {
+  background: linear-gradient(transparent 56%, rgba(var(--yellow-rgb), 0.35) 56%, rgba(var(--yellow-rgb), 0.35) 90%, transparent 90%);
+}
+
+/* Side edges and shadows would turn light along with --navy, so they stay dark. */
+:root[data-mode='dark'] .btn { --btn-shadow: rgba(0, 0, 0, 0.55); }
+:root[data-mode='dark'] .btn--primary, :root[data-mode='dark'] .btn--primary:hover { color: var(--base-navy); }
+:root[data-mode='dark'] .float-tag { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 0 rgba(0, 0, 0, 0.55), var(--sx) 18px 18px -6px rgba(0, 0, 0, 0.5); }
+:root[data-mode='dark'] .flow__detail { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 5px 0 rgba(0, 0, 0, 0.5), 0 18px 22px -8px rgba(0, 0, 0, 0.5); }
+:root[data-mode='dark'] .photo-card { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), var(--edge-stack), var(--sx) 30px 40px -12px rgba(0, 0, 0, 0.7); }
+:root[data-mode='dark'] .paper-card { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), var(--edge-stack), 0 22px 36px -16px rgba(0, 0, 0, 0.7); }
+:root[data-mode='dark'] .js .is-sprung {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1), var(--edge-stack),
+    var(--sx, 0px) calc(var(--sy, 0px) + 18px + var(--lift, 0) * 1px) calc(30px + var(--lift, 0) * 1.6px) -12px rgba(0, 0, 0, 0.7);
+}
+:root[data-mode='dark'] .hero__name-line--accent {
+  filter: drop-shadow(1px 1px 0 #000) drop-shadow(1px 1px 0 #000) drop-shadow(1px 1px 0 #000) drop-shadow(1px 1px 0 #000) drop-shadow(6px 8px 7px rgba(0, 0, 0, 0.5));
+}
+:root[data-mode='dark'] .hero__name { text-shadow: 1px 1px 0 var(--teal), 2px 2px 0 var(--teal), 3px 3px 0 var(--teal), 4px 4px 0 var(--base-teal-deep), 5px 5px 0 var(--base-teal-deep), 12px 16px 18px rgba(0, 0, 0, 0.5); }
+:root[data-mode='dark'] .section-title:not(.section-head--light *) { text-shadow: 1px 1px 0 var(--teal), 2px 2px 0 var(--base-teal-deep), 5px 8px 10px rgba(0, 0, 0, 0.45); }
+
+/* Surfaces and highlights that were fixed light colours */
+:root[data-mode='dark'] .section--alt { background-color: rgba(255, 255, 255, 0.025); }
+:root[data-mode='dark'] .tear--paper { background-color: var(--page); }
+:root[data-mode='dark'] .lead-card__band::after { background: var(--card); }
+:root[data-mode='dark'] .bars3d { background-color: var(--card); }
+:root[data-mode='dark'] .chart-card__label { text-shadow: 0 1px 0 #000; color: var(--cyan); }
+:root[data-mode='dark'] .identity-card::after, :root[data-mode='dark'] .timeline__card::after, :root[data-mode='dark'] .skill-card::after,
+:root[data-mode='dark'] .paper-card::after, :root[data-mode='dark'] .exp-card::after, :root[data-mode='dark'] .lead-card::after,
+:root[data-mode='dark'] .ach-card::after, :root[data-mode='dark'] .training-card::after, :root[data-mode='dark'] .principle::after,
+:root[data-mode='dark'] .recognition::after, :root[data-mode='dark'] .contact__card::after {
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.09), transparent 45%);
+}
+:root[data-mode='dark'] .chat-form input { color: var(--navy); }

@@ -1,0 +1,1319 @@
+{
+  "profile": {
+    "fullName": "Arian Jay G. Maala",
+    "shortLabel": "Computer Science Student | Research Enthusiast | Aspiring Data Analyst",
+    "heroIntro": "I am a Computer Science student passionate about research, data analysis, and technology. I enjoy exploring complex problems, working with data, developing meaningful insights, and transforming information into solutions that support informed decision-making.",
+    "heroStatement": "Curious by nature. Analytical in thinking. Research-driven in purpose.",
+    "aboutBio": "I am Arian Jay G. Maala, a Bachelor of Science in Computer Science student at Biliran Province State University. My academic journey has been shaped by a strong commitment to learning, research, leadership, and continuous improvement.\n\nI am particularly interested in research because it allows me to investigate problems, examine evidence, analyze information, and develop meaningful conclusions. I believe that data becomes more valuable when it is transformed into insights that help people understand problems and make informed decisions.\n\nMy background in Computer Science has encouraged me to explore the intersection of technology, statistics, data analysis, and machine learning. I am continuously developing my technical skills while seeking opportunities to apply analytical thinking to real-world problems.\n\nBeyond academics, my involvement in student leadership has strengthened my communication, collaboration, organization, and problem-solving abilities.\n\nMy long-term goal is to become a Data Analyst who can combine research, technical knowledge, and analytical skills to support evidence-based decision-making and contribute to meaningful projects.",
+    "careerGoal": "My goal is to transform data into knowledge, knowledge into insights, and insights into meaningful decisions.",
+    "visionText": "My ambition is to become a Data Analyst who uses research, statistics, technology, and critical thinking to transform data into meaningful insights.",
+    "contactText": "I am open to opportunities to learn, collaborate, participate in research, and develop projects involving technology and data analysis.",
+    "email": "arianmaala19@gmail.com",
+    "phone": "+639544856075",
+    "location": "Cabucgayan, Biliran, Philippines",
+    "profileImageUrl": "assets/images/untitled-design-69.jpg",
+    "heroImageUrl": "assets/images/copy-of-untitled.jpg"
+  },
+  "intro": {
+    "isEnabled": true,
+    "animationStyle": "drop",
+    "welcomeMessage": "Welcome to my portfolio",
+    "displayName": "Arian Jay G. Maala",
+    "program": "BS Computer Science",
+    "university": "Biliran Province State University",
+    "academicPeriod": "2023–2027",
+    "subtitle": "Research Enthusiast | Aspiring Data Analyst",
+    "photoUrl": "assets/images/uniform-pic.jpg"
+  },
+  "resumeUrl": null,
+  "resumePages": [
+    "assets/documents/view/resume-1.png?v=2",
+    "assets/documents/view/resume-2.png?v=2",
+    "assets/documents/view/resume-3.png?v=2",
+    "assets/documents/view/resume-4.png?v=2",
+    "assets/documents/view/resume-5.png?v=2"
+  ],
+  "cvPages": [
+    "assets/documents/view/cv-1.png?v=2",
+    "assets/documents/view/cv-2.png?v=2"
+  ],
+  "chatbot": {
+    "enabled": true,
+    "welcomeMessage": "Hi! I can answer questions about Arian's education, skills, research, and experience by quoting directly from this portfolio.",
+    "suggestedQuestions": [
+      "What is Arian studying?",
+      "What data analysis skills does Arian have?",
+      "What research has Arian done?",
+      "What leadership roles has Arian held?"
+    ],
+    "approvedFacts": []
+  },
+  "socialLinks": [
+    {
+      "platform": "Facebook",
+      "label": "Maala AJ",
+      "url": "https://www.facebook.com/yanmaala2K06/"
+    },
+    {
+      "platform": "Instagram",
+      "label": "yan_j20",
+      "url": "https://www.instagram.com/y4n_j20/"
+    },
+    {
+      "platform": "LinkedIn",
+      "label": "Maala Arian Jay",
+      "url": "https://www.linkedin.com/in/maala-arian-jay-9830b63b4/"
+    }
+  ],
+  "identityCards": [
+    {
+      "title": "Research and Inquiry",
+      "description": "Asking meaningful questions, examining evidence, and building conclusions grounded in careful investigation.",
+      "icon": "search"
+    },
+    {
+      "title": "Data Analysis and Interpretation",
+      "description": "Preparing, examining, and interpreting data to uncover patterns and turn information into understandable insights.",
+      "icon": "bar-chart"
+    },
+    {
+      "title": "Technology and Innovation",
+      "description": "Exploring how computer science, statistics, and machine learning can be applied to real-world problems.",
+      "icon": "cpu"
+    },
+    {
+      "title": "Leadership and Collaboration",
+      "description": "Organizing activities, communicating clearly, and working with others toward shared goals through student leadership.",
+      "icon": "users"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": null
+    },
+    {
+      "name": "Filipino",
+      "proficiency": null
+    },
+    {
+      "name": "Cebuano (Bisaya)",
+      "proficiency": null
+    },
+    {
+      "name": "Waray-Waray",
+      "proficiency": null
+    }
+  ],
+  "education": [
+    {
+      "institution": "Biliran Province State University",
+      "level": "Tertiary Education",
+      "program": "Bachelor of Science in Computer Science",
+      "startYear": 2023,
+      "endYear": 2027,
+      "description": null,
+      "achievements": [
+        {
+          "title": "Soon to Be Latin Honors (Manifesting)",
+          "isDistinction": true
+        },
+        {
+          "title": "Consistent Dean's Lister and President's Lister",
+          "isDistinction": true
+        }
+      ],
+      "photos": [
+        {
+          "url": "assets/images/college-gradpic.jpg",
+          "caption": "To God Be The Glory!"
+        }
+      ]
+    },
+    {
+      "institution": "Cabucgayan National High School",
+      "level": "Senior High School",
+      "program": "Accountancy, Business, and Management (ABM) Strand",
+      "startYear": 2021,
+      "endYear": 2023,
+      "description": null,
+      "achievements": [
+        {
+          "title": "With High Honors",
+          "isDistinction": true
+        },
+        {
+          "title": "Class Overall Top 1 (Valedictorian)",
+          "isDistinction": true
+        }
+      ],
+      "photos": [
+        {
+          "url": "assets/images/shs-gradpic-2.jpg",
+          "caption": "July 11, 2023"
+        }
+      ]
+    },
+    {
+      "institution": "Cabucgayan National High School",
+      "level": "Junior High School",
+      "program": null,
+      "startYear": 2017,
+      "endYear": 2021,
+      "description": null,
+      "achievements": [
+        {
+          "title": "With Honors",
+          "isDistinction": true
+        }
+      ],
+      "photos": [
+        {
+          "url": "assets/images/jhs-gradpic.jpg",
+          "caption": "July 16, 2021"
+        }
+      ]
+    },
+    {
+      "institution": "Looc Elementary School",
+      "level": "Primary Education",
+      "program": null,
+      "startYear": 2011,
+      "endYear": 2017,
+      "description": null,
+      "achievements": [
+        {
+          "title": "Best in Arts",
+          "isDistinction": true
+        }
+      ],
+      "photos": [
+        {
+          "url": "assets/images/elementary-gradpic.jpg",
+          "caption": "May 31, 2017"
+        }
+      ]
+    }
+  ],
+  "skillCategories": [
+    {
+      "slug": "data-analysis",
+      "name": "Data Analysis & Data Engineering",
+      "description": "Skills that support the preparation, examination, interpretation, and analysis of data — the foundation of my path toward becoming a Data Analyst.",
+      "icon": "bar-chart",
+      "isFeatured": true,
+      "skills": [
+        {
+          "name": "Data Augmentation",
+          "icon": "layers"
+        },
+        {
+          "name": "Statistical Analysis",
+          "icon": "line-chart"
+        },
+        {
+          "name": "Machine Learning Data Preparation",
+          "icon": "database"
+        },
+        {
+          "name": "Jupyter Notebook",
+          "icon": "code"
+        },
+        {
+          "name": "RStudio",
+          "icon": "table"
+        },
+        {
+          "name": "Data Interpretation",
+          "icon": "lightbulb"
+        },
+        {
+          "name": "Research Data Analysis",
+          "icon": "scatter-chart"
+        }
+      ]
+    },
+    {
+      "slug": "research-writing",
+      "name": "Research & Academic Writing",
+      "description": "I enjoy developing research outputs that communicate findings clearly and meaningfully.",
+      "icon": "file-text",
+      "isFeatured": false,
+      "skills": [
+        {
+          "name": "Information Gathering",
+          "icon": "search"
+        },
+        {
+          "name": "Research Manuscript Development",
+          "icon": "file-text"
+        },
+        {
+          "name": "Thesis Writing",
+          "icon": "pen-tool"
+        },
+        {
+          "name": "Research Documentation",
+          "icon": "book-open"
+        },
+        {
+          "name": "Research Poster Development",
+          "icon": "presentation"
+        },
+        {
+          "name": "Analytical Thinking",
+          "icon": "lightbulb"
+        },
+        {
+          "name": "Evidence-Based Problem Solving",
+          "icon": "target"
+        }
+      ]
+    },
+    {
+      "slug": "design-multimedia",
+      "name": "Graphic Design & Multimedia",
+      "description": "Visual communication for research, school events, and learning materials.",
+      "icon": "palette",
+      "isFeatured": false,
+      "skills": [
+        {
+          "name": "Canva",
+          "icon": "palette"
+        },
+        {
+          "name": "Graphic Design",
+          "icon": "pen-tool"
+        },
+        {
+          "name": "Research Poster Design",
+          "icon": "presentation"
+        },
+        {
+          "name": "Event Publication Materials",
+          "icon": "megaphone"
+        },
+        {
+          "name": "T-Shirt Design",
+          "icon": "shirt"
+        },
+        {
+          "name": "Educational Material Design",
+          "icon": "book-open"
+        },
+        {
+          "name": "CapCut",
+          "icon": "video"
+        },
+        {
+          "name": "Video Editing",
+          "icon": "video"
+        }
+      ]
+    },
+    {
+      "slug": "software-development",
+      "name": "Software Development",
+      "description": "I have experience with various programming languages, frameworks, development tools, and database technologies that enable me to design, develop, and implement innovative software solutions.",
+      "icon": "code",
+      "isFeatured": false,
+      "skills": [
+        {
+          "name": "Java & Python Programming Language",
+          "icon": "code",
+          "proficiency": null
+        },
+        {
+          "name": "MySQL",
+          "icon": "database",
+          "proficiency": null
+        },
+        {
+          "name": "HyperText Markup Language (HTML)",
+          "icon": "code"
+        },
+        {
+          "name": "Cascading Style Sheets (CSS)",
+          "icon": "palette"
+        },
+        {
+          "name": "Django Framework",
+          "icon": "code"
+        }
+      ]
+    },
+    {
+      "slug": "productivity",
+      "name": "Productivity Tools & Digital Skills",
+      "description": "Everyday tools for documents, data, presentations, and digital learning.",
+      "icon": "monitor",
+      "isFeatured": false,
+      "skills": [
+        {
+          "name": "Microsoft Word",
+          "icon": "file-text"
+        },
+        {
+          "name": "Microsoft Excel",
+          "icon": "table"
+        },
+        {
+          "name": "Microsoft PowerPoint",
+          "icon": "presentation"
+        },
+        {
+          "name": "Digital Tools for Educational Environments",
+          "icon": "monitor"
+        }
+      ]
+    },
+    {
+      "slug": "communication-teaching",
+      "name": "Communication & Teaching",
+      "description": "Speaking, hosting, and supporting students and school activities.",
+      "icon": "mic",
+      "isFeatured": false,
+      "skills": [
+        {
+          "name": "Verbal Communication",
+          "icon": "mic"
+        },
+        {
+          "name": "Hosting School Events",
+          "icon": "megaphone"
+        },
+        {
+          "name": "Instructional Support",
+          "icon": "book-open"
+        },
+        {
+          "name": "Student Learning Support",
+          "icon": "graduation-cap"
+        },
+        {
+          "name": "Educational Activity Coordination",
+          "icon": "calendar"
+        }
+      ]
+    },
+    {
+      "slug": "interpersonal",
+      "name": "Interpersonal Skills",
+      "description": "Working well with others while staying organized and responsible.",
+      "icon": "users",
+      "isFeatured": false,
+      "skills": [
+        {
+          "name": "Leadership",
+          "icon": "award"
+        },
+        {
+          "name": "Team Collaboration",
+          "icon": "users"
+        },
+        {
+          "name": "Organization",
+          "icon": "layers"
+        },
+        {
+          "name": "Time Management",
+          "icon": "clock"
+        },
+        {
+          "name": "Adaptability",
+          "icon": "refresh"
+        },
+        {
+          "name": "Cultural Sensitivity",
+          "icon": "globe"
+        },
+        {
+          "name": "Civic Responsibility",
+          "icon": "flag"
+        }
+      ]
+    }
+  ],
+  "systems": [
+    {
+      "name": "Automated Student Class Record Monitoring (ASCReM) Web Application",
+      "url": "https://ascrem.onrender.com/",
+      "photoUrl": "assets/images/web-development-services-flyer-1080-x-1920-px-1920-2.png"
+    },
+    {
+      "name": "Biliran Province State University-Scholarship Record Management System (BiPSU-SRMS)",
+      "url": "https://backend-vb5d.onrender.com/",
+      "photoUrl": "assets/images/screenshot-2026-11-04-160306.png"
+    }
+  ],
+  "experiences": [
+    {
+      "section": "professional",
+      "title": "On-the-Job Training",
+      "organization": null,
+      "startYear": 2026,
+      "endYear": 2027,
+      "status": "Scheduled / in progress",
+      "summary": null,
+      "points": [],
+      "media": []
+    },
+    {
+      "section": "professional",
+      "title": "Board of Trustee – School of Technology and Computer Studies (STCS)",
+      "organization": "Federation of Supreme Student Council, Biliran Province State University",
+      "startYear": 2025,
+      "endYear": 2026,
+      "status": "Former",
+      "summary": null,
+      "points": [
+        {
+          "pointType": "responsibility",
+          "content": "Represented the interests and concerns of STCS students in student governance and federation-level discussions."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Participated in planning and supporting student development initiatives, educational programs, and university-wide activities."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Coordinated with fellow student leaders to promote student participation, academic engagement, and leadership development."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Collaborated with student organizations and university stakeholders to support programs that addressed student needs and strengthened campus involvement."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Contributed to decision-making and organizational initiatives that promoted student welfare, collaboration, and responsible leadership."
+        }
+      ],
+      "media": [
+        {
+          "mediaUrl": "assets/images/fb-img-1793777960511-2.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "section": "professional",
+      "title": "Public Information Officer – STCS Supreme Student Council",
+      "organization": "Biliran Province State University",
+      "startYear": 2024,
+      "endYear": 2025,
+      "status": "Former",
+      "summary": null,
+      "points": [
+        {
+          "pointType": "responsibility",
+          "content": "Managed the dissemination of announcements, updates, and important information to keep students informed about council activities and university programs."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Prepared and shared communication materials to promote student activities, academic initiatives, and organizational events."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Assisted in documenting council activities and maintaining clear, timely communication between student leaders and the student body."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Coordinated with council officers and student organizations to ensure the accurate dissemination of information regarding events and initiatives."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Promoted student engagement and organizational transparency through effective communication and information management."
+        }
+      ],
+      "media": [
+        {
+          "mediaUrl": "assets/images/fb-img-1793780246437.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "section": "professional",
+      "title": "President – BiPSU Computer Science Society (CSS)",
+      "organization": "School of Technology and Computer Studies, Biliran Province State University",
+      "startYear": 2023,
+      "endYear": 2024,
+      "status": "Former",
+      "summary": null,
+      "points": [
+        {
+          "pointType": "responsibility",
+          "content": "Led the organization in planning, coordinating, and implementing academic, technical, and student development activities for Computer Science students."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Facilitated organizational meetings, coordinated with officers and members, and monitored the implementation of society programs and initiatives."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Organized seminars, academic activities, and student engagement programs that supported technical learning, collaboration, and professional development."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Represented the society in coordination with faculty members, university officials, and other student organizations."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Encouraged student participation, teamwork, and leadership while promoting the academic interests and welfare of Computer Science students."
+        }
+      ],
+      "media": [
+        {
+          "mediaUrl": "assets/images/fb-img-1793778443574.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "section": "professional",
+      "title": "Work Immersion Trainee",
+      "organization": "Ormoc Credit Cooperative, Inc. (OCCCI)-Cabucgayan",
+      "startYear": 2023,
+      "endYear": 2023,
+      "status": null,
+      "summary": null,
+      "points": [
+        {
+          "pointType": "responsibility",
+          "content": "Assisted in processing financial transactions, including collecting BILECO payments, preparing cash flows, deposit slips, and cash counts."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Encoded, edited, and printed financial documents, client information, promissory notes, proof sheets, transmittals, and journal vouchers."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Supported loan renewal and new member account opening procedures, including the preparation and printing of Share Capital (CBU), savings passbooks, and required membership documents."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Organized, filed, and maintained confidential member records, membership forms, and financial documents to ensure proper documentation and accessibility."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Assisted in preparing and distributing membership materials, including packing CBU and savings passbooks for new members."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Maintained the organization of financial materials by arranging forms alphabetically, replacing coin wrappers, and updating the cooperative's Key Result Bulletin Board."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Developed practical skills in financial documentation, data encoding, records management, customer service, and office administration through hands-on experience in cooperative operations."
+        }
+      ],
+      "media": [
+        {
+          "mediaUrl": "assets/images/20230530-161721.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "section": "leadership",
+      "title": "Board of Trustee, School of Technology and Computer Studies",
+      "organization": "Federation of Supreme Student Council, Biliran Province State University",
+      "startYear": 2025,
+      "endYear": 2026,
+      "status": "Former",
+      "summary": null,
+      "points": [
+        {
+          "pointType": "responsibility",
+          "content": "Represented the interests and concerns of STCS students in student governance and federation-level discussions."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Participated in planning and supporting student development initiatives, educational programs, and university-wide activities."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Coordinated with fellow student leaders to promote student participation, academic engagement, and leadership development."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Collaborated with student organizations and university stakeholders to support programs that addressed student needs and strengthened campus involvement."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Contributed to decision-making and organizational initiatives that promoted student welfare, collaboration, and responsible leadership."
+        }
+      ],
+      "media": []
+    },
+    {
+      "section": "leadership",
+      "title": "Public Information Officer",
+      "organization": "STCS–Supreme Student Council, Biliran Province State University",
+      "startYear": 2024,
+      "endYear": 2025,
+      "status": "Former",
+      "summary": null,
+      "points": [
+        {
+          "pointType": "responsibility",
+          "content": "Managed the dissemination of announcements, updates, and important information to keep students informed about council activities and university programs."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Prepared and shared communication materials to promote student activities, academic initiatives, and organizational events."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Assisted in documenting council activities and maintaining clear, timely communication between student leaders and the student body."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Coordinated with council officers and student organizations to ensure the accurate dissemination of information regarding events and initiatives."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Promoted student engagement and organizational transparency through effective communication and information management."
+        }
+      ],
+      "media": []
+    },
+    {
+      "section": "leadership",
+      "title": "President",
+      "organization": "BiPSU–Computer Science Society (CSS), School of Technology and Computer Studies, Biliran Province State University",
+      "startYear": 2023,
+      "endYear": 2024,
+      "status": "Former",
+      "summary": null,
+      "points": [
+        {
+          "pointType": "responsibility",
+          "content": "Led the organization in planning, coordinating, and implementing academic, technical, and student development activities for Computer Science students."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Facilitated organizational meetings, coordinated with officers and members, and monitored the implementation of society programs and initiatives."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Organized seminars, academic activities, and student engagement programs that supported technical learning, collaboration, and professional development."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Represented the society in coordination with faculty members, university officials, and other student organizations."
+        },
+        {
+          "pointType": "responsibility",
+          "content": "Encouraged student participation, teamwork, and leadership while promoting the academic interests and welfare of Computer Science students."
+        }
+      ],
+      "media": []
+    }
+  ],
+  "achievements": [
+    {
+      "category": "international",
+      "distinction": "Technical Writer",
+      "title": "World University Ranking for Innovation (WURI)",
+      "photos": [],
+      "certificateUrl": null,
+      "photoUrl": "assets/images/wuri-innovation-1.jpg"
+    },
+    {
+      "category": "regional",
+      "distinction": "Qualifier",
+      "title": "Persuasive Oratory",
+      "year": "2026",
+      "location": "Leyte Normal University, Tacloban City",
+      "photos": [
+        {
+          "url": "assets/images/fb-img-1793777452207.jpg",
+          "caption": ""
+        }
+      ],
+      "eventName": "Regional Culture and Arts Festival (RCAF) 8 - Literary Arts Competition"
+    },
+    {
+      "category": "regional",
+      "distinction": "Qualifier",
+      "title": "Statistics Quiz Bee",
+      "year": 2023,
+      "location": "Hotel Alejandro, Tacloban City",
+      "photos": [
+        {
+          "url": "assets/images/fb-img-1756012514273-1.jpg",
+          "caption": ""
+        }
+      ],
+      "eventName": "27th Regional Philippine Statistics Quiz",
+      "certificateUrl": "assets/certificates/regional-statistics-quiz-bee.jpg"
+    },
+    {
+      "category": "division",
+      "title": "Science Investigative Project (SIP) Competition",
+      "photos": [],
+      "distinction": "4th Place",
+      "eventName": "Division Festival of Talents (DFOT) - Biliran",
+      "year": "2019",
+      "location": "Naval National High School (NNHS)"
+    },
+    {
+      "category": "division",
+      "title": "MTAP Competition - Written Category",
+      "photos": [],
+      "distinction": "Qualifier",
+      "eventName": "Division Festival of Talents (DFOT) - Biliran",
+      "year": "2017",
+      "location": "Naval School of Fisheries (NSF)"
+    },
+    {
+      "category": "division",
+      "title": "MTAP Competition - Oral Category",
+      "photos": [],
+      "distinction": "Qualifier ",
+      "eventName": "Division Festival of Talents (DFOT) - Biliran",
+      "year": "2017-2018",
+      "location": "Kawayan Elementary School (KES) & Almeria National High School (ANHS)"
+    },
+    {
+      "category": "institutional",
+      "distinction": "Champion",
+      "title": "Persuasive Oratory",
+      "eventName": "1st Handuraw Literary Arts Competition",
+      "issuingOrganization": "Biliran Province State University",
+      "photos": [
+        {
+          "url": "assets/images/fb-img-1793777580455.jpg",
+          "caption": ""
+        }
+      ],
+      "certificateUrl": "assets/certificates/champion-literaryarts-2.jpg",
+      "photoUrl": null,
+      "year": "2026"
+    },
+    {
+      "category": "institutional",
+      "distinction": "2nd Place",
+      "title": "Pagsulat ng Sanaysay",
+      "eventName": "HULMA KULTURA: School-Based Culture and the Arts Competition",
+      "year": 2024,
+      "photos": [
+        {
+          "url": "assets/images/fb-img-1771844060166.jpg",
+          "caption": ""
+        }
+      ],
+      "certificateUrl": "assets/certificates/2ndplace-literaryarts.jpg",
+      "location": "Biliran Province State University"
+    },
+    {
+      "category": "institutional",
+      "distinction": "2nd Place",
+      "title": "Statistics Quiz Bee",
+      "year": 2023,
+      "issuingOrganization": "Biliran Province State University",
+      "photos": [
+        {
+          "url": "assets/images/386441691-1453142838587112-8674685716535373780-n.jpg",
+          "caption": ""
+        }
+      ],
+      "eventName": "27th Philippine Statistics Quiz — Provincial Elimination",
+      "certificateUrl": "assets/certificates/provincial-statistics-quiz-bee.jpg"
+    },
+    {
+      "category": "institutional",
+      "distinction": "Contestant",
+      "title": "Quiz Bee",
+      "photos": [
+        {
+          "url": "assets/images/img-20250312-111357.jpg",
+          "caption": ""
+        }
+      ],
+      "photoUrl": null,
+      "certificateUrl": "assets/certificates/bfp-competition.jpg",
+      "year": "2025",
+      "eventName": "Hot Shots: The Firefighter Quiz Challenge",
+      "location": "Biliran Province State University"
+    },
+    {
+      "category": "academic",
+      "title": "Outstanding Performance in Communication Arts — English",
+      "photos": [],
+      "certificateUrl": null,
+      "photoUrl": "assets/images/com-arts-english-1.jpg",
+      "eventName": "6th Commencement Exercises K-12 Curriculum of Cabucgayan National High School (CNHS)",
+      "location": "Municipal Civic Center, Cabucgayan, Biliran",
+      "year": "2023"
+    },
+    {
+      "category": "academic",
+      "title": "Outstanding Performance in Communication Arts — Filipino",
+      "photos": [
+        {
+          "url": "assets/images/comarts-filipino-1.jpg",
+          "caption": ""
+        }
+      ],
+      "eventName": "6th Commencement Exercises K-12 Curriculum of Cabucgayan National High School (CNHS)",
+      "year": "2023",
+      "location": "Municipal Civic Center, Cabucgayan, Biliran"
+    },
+    {
+      "category": "academic",
+      "title": "Outstanding Performance in Research",
+      "photos": [
+        {
+          "url": "assets/images/researchawardee-1.jpg",
+          "caption": ""
+        }
+      ],
+      "eventName": "6th Commencement Exercises K-12 Curriculum of Cabucgayan National High School (CNHS)",
+      "year": "2023",
+      "location": "Municipal Civic Center, Cabucgayan, Biliran"
+    },
+    {
+      "category": "academic",
+      "title": "Outstanding Performance in Innovation",
+      "photos": [
+        {
+          "url": "assets/images/innovation-awardee-1.jpg",
+          "caption": ""
+        }
+      ],
+      "eventName": "6th Commencement Exercises K-12 Curriculum of Cabucgayan National High School (CNHS)",
+      "year": "2023",
+      "location": "Municipal Civic Center, Cabucgayan, Biliran"
+    },
+    {
+      "category": "academic",
+      "title": "Best Research Poster",
+      "eventName": "2nd School-Based Research Summit",
+      "issuingOrganization": "Cabucgayan National High School",
+      "photos": [
+        {
+          "url": "assets/images/best-research-poster.jpg",
+          "caption": ""
+        }
+      ],
+      "year": "2023",
+      "location": "Cabucgayan National High School (CNHS)",
+      "distinction": null
+    },
+    {
+      "category": "academic",
+      "title": "Gerry Roxas Leadership Award",
+      "photos": [
+        {
+          "url": "assets/images/jerry-roxas.jpg",
+          "caption": ""
+        }
+      ],
+      "location": "Municipal Civic Center, Cabucgayan, Biliran",
+      "year": "2023",
+      "eventName": "6th Commencement Exercises K-12 Curriculum of Cabucgayan National High School (CNHS)"
+    },
+    {
+      "category": "institutional",
+      "title": "Pagsulat ng Dagli",
+      "photos": [
+        {
+          "url": "assets/images/dagli-participation.jpg",
+          "caption": ""
+        }
+      ],
+      "distinction": "3rd Place",
+      "eventName": "Buwan ng Panitikan",
+      "year": "2025",
+      "location": "Biliran Province State University"
+    },
+    {
+      "category": "institutional",
+      "title": "Tech Trivia Competition",
+      "photos": [
+        {
+          "url": "assets/images/482319471-650535224196389-8148267785626117541-n.jpg",
+          "caption": ""
+        }
+      ],
+      "distinction": "Contestant",
+      "eventName": "CSS Post-Midterm Stree Free Day",
+      "year": "2024",
+      "location": "BiPSU-Student Center",
+      "certificateUrl": "assets/certificates/stress-free-day.jpg"
+    }
+  ],
+  "trainings": [
+    {
+      "category": "leadership",
+      "title": "Philippine Association of Campus Student Advisers (PACSA)",
+      "year": 2025,
+      "location": "Big 8, Hotel, Tagum City, Davao del Norte",
+      "photos": [
+        {
+          "url": "assets/images/received-532711392850620.jpg",
+          "caption": ""
+        }
+      ],
+      "dateLabel": "April 2-4, 2025"
+    },
+    {
+      "category": "leadership",
+      "title": "PANDAYAN 2024",
+      "trainingType": "3-Day Annual Student Leaders Convergence",
+      "theme": "BiPSU Student Leaders Advancing Future-Proof and Sustainable Student Leadership",
+      "year": 2024,
+      "photos": [
+        {
+          "url": "assets/images/450241360-511406537980981-1796682916656424312-n-1.jpg",
+          "caption": ""
+        }
+      ],
+      "dateLabel": "July 10-12, 2024",
+      "location": "BiPSU Gymnasium",
+      "certificateUrl": "assets/certificates/pandayan-2-certificate.jpg"
+    },
+    {
+      "category": "leadership",
+      "title": "Peer Facilitators Training",
+      "year": 2025,
+      "photos": [
+        {
+          "url": "assets/images/received-626810190185315.jpg",
+          "caption": ""
+        }
+      ],
+      "dateLabel": "March 25-27, 2025",
+      "location": "BiPSU Hostel A"
+    },
+    {
+      "category": "skill-development",
+      "title": "Media Mastery for CSS: Comprehensive Skills Development Workshop",
+      "trainingType": "Workshop",
+      "year": 2024,
+      "dateLabel": "October 16, 2024",
+      "photos": [
+        {
+          "url": "assets/images/fb-img-1793778512974-2.jpg",
+          "caption": ""
+        }
+      ],
+      "location": "BiPSU-HAVC"
+    },
+    {
+      "category": "skill-development",
+      "title": "Mobile Application and Web Development Workshop",
+      "trainingType": "Workshop",
+      "year": 2025,
+      "dateLabel": "August 28–29, 2026 & September 3–4, 2025",
+      "location": "BiPSU Gymnasium",
+      "photos": [
+        {
+          "url": "assets/images/img-20250829-113731-1-1.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "category": "seminar",
+      "title": "Global Industry Lecture and AI-Based Applications to Smart Agriculture",
+      "year": 2026,
+      "dateLabel": "October 8, 2026",
+      "location": "BiPSU Gymnasium",
+      "photos": [
+        {
+          "url": "assets/images/img-20261008-090044.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "category": "seminar",
+      "title": "Thesis Preparation with the Use of Trending Tools and Industry Practices",
+      "year": 2025,
+      "dateLabel": "October 6–7, 2025",
+      "location": "BiPSU Student Center",
+      "photos": [
+        {
+          "url": "assets/images/img-20251006-150913.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "category": "seminar",
+      "title": "Arts and Tech-Fusion: Animating our Encrypted Imagination",
+      "year": 2024,
+      "dateLabel": "March 8, 2024",
+      "location": "BiPSU Gymnasium",
+      "photos": [
+        {
+          "url": "assets/images/430205756-413113627938551-1673644687842055061-n-1.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "category": "seminar",
+      "title": "Digital Wellness: Connect Smarter, Stay Safer",
+      "year": 2024,
+      "dateLabel": "February 8, 2024",
+      "location": "BiPSU Gymnasium",
+      "photos": [
+        {
+          "url": "assets/images/421114258-898022002095514-7014315196829786408-n-1.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "category": "webinar",
+      "title": "Global Collaborative Software Development: How International Teams Build Software Together",
+      "year": 2026,
+      "dateLabel": "February 23, 2026",
+      "location": "Online via Zoom",
+      "photos": [
+        {
+          "url": "assets/images/fb-img-1793799335286.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "category": "skill-development",
+      "title": "Introduction to AI Literacy and Responsible Use",
+      "photos": [
+        {
+          "url": "assets/images/mapua-micro-credential-course-e-certificate.jpg",
+          "caption": ""
+        }
+      ],
+      "trainingType": "Free Online Course",
+      "year": 2026,
+      "dateLabel": "September 14, 2026",
+      "organizer": "Commission on Higher Education (CHED)-ACHIEVE & MAPUA University"
+    },
+    {
+      "category": "skill-development",
+      "title": "Networking Basics",
+      "photos": [
+        {
+          "url": "assets/images/networkingbasicsupdate20260522-32-oapkvw.jpg",
+          "caption": ""
+        }
+      ],
+      "trainingType": "Free Online Course",
+      "year": 2026,
+      "dateLabel": "May 22, 2026",
+      "organizer": "Cisco Networking Academy"
+    },
+    {
+      "category": "skill-development",
+      "title": "Plan, Prepare and Build Cybersecurity Strategy for the Future",
+      "photos": [
+        {
+          "url": "assets/images/gartner-e-certificate.jpg",
+          "caption": ""
+        }
+      ],
+      "trainingType": "Free Online Course",
+      "year": 2024,
+      "dateLabel": "November 26, 2024",
+      "organizer": "Gartner"
+    },
+    {
+      "category": "seminar",
+      "title": "Mastering English Foundations, Upholding Academic Integrity, and Advancing Gender-Fair Writing",
+      "photos": [
+        {
+          "url": "assets/images/mastering-english-foundation-e-certificate.jpg",
+          "caption": ""
+        }
+      ],
+      "trainingType": "Workshop",
+      "year": 2025,
+      "dateLabel": "April 29, 2025",
+      "location": "BiPSU-Student Center"
+    }
+  ],
+  "researchPapers": [
+    {
+      "researchType": "qualitative",
+      "title": "Perception of Parents in Barangay Looc on the Implementation of Limited Face-to-Face Classes under the New Normal Education",
+      "academicLevel": "Grade 12",
+      "institution": "Cabucgayan National High School",
+      "yearLabel": "2022"
+    },
+    {
+      "researchType": "qualitative",
+      "title": "Exploring Traditional Medicine in Modern Times: The Role of Faith Healers in Lucsoon, Naval, Biliran",
+      "academicLevel": "2nd Year College, Second Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2025"
+    },
+    {
+      "researchType": "qualitative",
+      "title": "Intelektwalisasyon ng Wikang Balbal ng mga LGBTQIA+ na Mag-aaral sa Biliran Province State University bilang Sosyo-Lingguwistikong Inobasyon sa Wikang Filipino",
+      "academicLevel": "3rd Year College, First Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2025"
+    },
+    {
+      "researchType": "qualitative",
+      "title": "Mga Salik na Nakaaapekto sa Mañana Habit ng mga Kolehiyong Mag-aaral ng School of Technology and Computer Studies sa Biliran Province State University",
+      "academicLevel": "3rd Year College, Second Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2026"
+    },
+    {
+      "researchType": "quantitative",
+      "title": "Impact of Product Price Increase on the Pricing Strategy of a Merchandising Business in MaBaBuLEs",
+      "academicLevel": "Grade 12",
+      "institution": "Cabucgayan National High School"
+    },
+    {
+      "researchType": "quantitative",
+      "title": "Economic Issues Meet by SMEs in Barangay Looc, Cabucgayan, Biliran",
+      "academicLevel": "Grade 12",
+      "institution": "Cabucgayan National High School",
+      "yearLabel": "2023"
+    },
+    {
+      "researchType": "developmental",
+      "title": "Computer Science Student-Learning Reference System (CSS-LRS)",
+      "academicLevel": "1st Year College, Second Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2024"
+    },
+    {
+      "researchType": "developmental",
+      "title": "Predicting the Academic Performance of Students at Biliran Province State University through AI Utilization Using Naive Bayes Classification Algorithm",
+      "academicLevel": "2nd Year College, First Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2024"
+    },
+    {
+      "researchType": "developmental",
+      "title": "Computer Science Graduates Employability Predictions",
+      "academicLevel": "2nd Year College, First Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2024"
+    },
+    {
+      "researchType": "developmental",
+      "title": "Automated Rock Type Classification Mobile App for Construction Using Convolutional Neural Networks",
+      "academicLevel": "2nd Year College, Second Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2025"
+    },
+    {
+      "researchType": "developmental",
+      "title": "Automated Student Class Record Monitoring (ASCReM) Web Application",
+      "academicLevel": "3rd Year College, First Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2025"
+    },
+    {
+      "researchType": "developmental",
+      "title": "Naval Public Market Price Watch System",
+      "academicLevel": "3rd Year College, Second Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2026"
+    },
+    {
+      "researchType": "developmental",
+      "title": "Scholarship Record Management with Eligibility Recommender for Higher Education Institution",
+      "academicLevel": "4th Year College, First Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2026–2027"
+    },
+    {
+      "researchType": "action",
+      "title": "A Feasibility Study: The Impact of Inflation Rate on Juditha's Sari-Sari Store Customer Purchasing Behavior",
+      "academicLevel": "2nd Year College, First Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2024"
+    },
+    {
+      "researchType": "action",
+      "title": "LIG-ON: An Environmental Action Plan for Water and Sanitation in Barangay Sto. Niño, Naval, Biliran",
+      "academicLevel": "3rd Year College, First Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2025"
+    },
+    {
+      "researchType": "action",
+      "title": "SALIG: Safe Spaces Awareness and Learning Initiative for Gender Protection",
+      "academicLevel": "3rd Year College, Second Semester",
+      "institution": "Biliran Province State University",
+      "yearLabel": "2026"
+    }
+  ],
+  "careerPrinciples": [
+    {
+      "title": "Research Before Conclusions",
+      "description": "Understand the problem, investigate the evidence, and develop conclusions supported by data.",
+      "icon": "search"
+    },
+    {
+      "title": "Data With Purpose",
+      "description": "Use analytical methods and visualization to communicate information clearly and support informed decisions.",
+      "icon": "bar-chart"
+    },
+    {
+      "title": "Continuous Learning",
+      "description": "Develop technical competencies, explore new tools, and improve through research, experimentation, and practical experience.",
+      "icon": "book-open"
+    }
+  ],
+  "visionSteps": [
+    {
+      "label": "Question",
+      "description": "Start with a meaningful question worth answering."
+    },
+    {
+      "label": "Research",
+      "description": "Investigate the context, literature, and evidence behind the problem."
+    },
+    {
+      "label": "Data",
+      "description": "Gather, clean, and prepare the data needed to examine it."
+    },
+    {
+      "label": "Analysis",
+      "description": "Apply statistical and analytical methods to discover patterns."
+    },
+    {
+      "label": "Insight",
+      "description": "Interpret the results into clear, honest findings."
+    },
+    {
+      "label": "Decision",
+      "description": "Communicate insights that support informed decisions."
+    }
+  ],
+  "projects": [
+    {
+      "slug": "project-1793745414947",
+      "title": "Automated Student Class Record Monitoring (ASCReM) Web Application",
+      "summary": "The Automated Student Class Record Monitoring (ASCReM) Web Application focuses on providing instructors of the School of Technology and Computer Studies (STCS) with a platform for managing class records such as attendance, scores, grades, and reports. The system includes modules for authentication, dashboard viewing, class management, attendance tracking, grade computation, report generation, and account customization. It allows instructors to export attendance sheets and grade reports and access real-time summaries of student performance.",
+      "status": "Completed",
+      "isPlaceholder": false,
+      "categories": [],
+      "technologies": [],
+      "charts": [],
+      "outputs": [
+        {
+          "name": "ASReM Web Application",
+          "type": "Web app",
+          "url": "https://ascrem.onrender.com/"
+        }
+      ],
+      "thumbnailUrl": "assets/images/web-development-services-flyer-1080-x-1920-px-1920.png",
+      "paperUrl": "assets/documents/automated-student-class-record-monitoring-ascrem-w.pdf"
+    }
+  ],
+  "cvUrl": null
+}

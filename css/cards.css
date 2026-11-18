@@ -1,0 +1,64 @@
+/* =====================================================================
+   cards.css · one outline for every card, loaded last so it wins.
+   The colours come from the active theme, so the outline suits the
+   background in light mode, dark mode and on the dark bands.
+   ===================================================================== */
+
+:root {
+  --card-outline: rgba(var(--teal-rgb), 0.6);
+  --card-outline-hover: var(--teal);
+  --photo-outline: rgba(var(--teal-rgb), 0.35);
+}
+:root[data-mode='dark'] {
+  --card-outline: rgba(var(--cyan-rgb), 0.5);
+  --card-outline-hover: var(--cyan);
+  --photo-outline: rgba(var(--cyan-rgb), 0.28);
+}
+/* The dark bands use the bright accent in both modes. */
+.section--ink,
+.section--teal {
+  --card-outline: rgba(var(--cyan-rgb), 0.7);
+  --card-outline-hover: var(--cyan);
+}
+
+.paper,
+.paper-card,
+.project-card,
+.research-stats,
+.goal-quote,
+.flow__detail,
+.photo-card {
+  border: 2px solid var(--card-outline);
+  border-radius: var(--radius);
+}
+
+.paper:hover,
+.paper-card:hover,
+.project-card:hover,
+.project-card:focus-within {
+  border-color: var(--card-outline-hover);
+}
+
+/* Photos inside cards use the card's colour in a thinner, fainter line, so the card stays the main frame. */
+.proof-photo,
+.edu-photo {
+  border: 1px solid var(--photo-outline);
+  border-radius: var(--radius);
+}
+.proof-photo:hover,
+.proof-photo:focus-visible,
+.edu-photo:hover,
+.edu-photo:focus-visible {
+  border-color: var(--card-outline-hover);
+}
+.proof-photo img,
+.edu-photo img { border-radius: 3px; }
+
+/* The same depth on every card. */
+.project-card,
+.flow__detail { box-shadow: var(--shadow-paper); }
+
+/* Cards sit straight, at rest and on hover. */
+.goal-quote { transform: none; }
+.identity-card:hover { transform: translateY(-5px); }
+.paper-card:hover { transform: translateY(-4px); }
